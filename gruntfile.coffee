@@ -38,16 +38,26 @@ module.exports = (grunt) ->
 
           pretty: true
 
-        files:
-          "index.html": "index.jade"
+        files: [
+          {
+            expand: true
+            src: ['*.jade']
+            ext: '.html'
+          }
+        ]
 
       prod:
         options:
           data:
             debug: false
 
-        files:
-          "index.html": "index.jade"
+        files: [
+          {
+            expand: true
+            src: ['*.jade']
+            ext: '.html'
+          }
+        ]
 
     copy:
       main:
@@ -107,7 +117,6 @@ module.exports = (grunt) ->
   
   # Default task(s).
   grunt.registerTask "default", [
-    "less:dev"
     "jade:dev"
     "express"
     "watch"

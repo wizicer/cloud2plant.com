@@ -1,0 +1,358 @@
+extends layout.jade
+block sections
+  section.intro
+    .container
+      h1.has-subtitle Powerful features
+      p.subtitle Easy to setup, hard to put down
+  // For designers
+  section#for-designers.light
+    .container
+      h1 Made for designers
+      // Everything in one place
+      .row.feature-row
+        .col-md-6.co.col-md-push-6
+          .feature-image
+            img(src="src/img/features/sites.png", alt="")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Multiple websites
+              p
+                | Manage multiple sites and clients from one account
+                | without installing any software. Surreal does its
+                | magic with just an FTP, SFTP, or Amazon S3 connection.
+              p
+                | Integrate with new and existing websites. Since all
+                | files stay on
+                em your server
+                | , you&#8217;re never
+                | locked into our service.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Click-to-define
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/click-to-define.png", alt="List of users")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Click-to-define
+              p
+                | Define content regions simply by clicking on the
+                | page. Now you can integrate without touching any
+                | code!
+              p
+                | Prefer to get into the HTML? Surreal has a great
+                | source editor complete with beautiful syntax
+                | highlighting.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Easily manage users
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/users.png", alt="List of users")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Client accounts
+              p
+                | Create users and assign privileges and permissions.
+                | Each client will have access only to the site(s) you
+                | choose, and privileges can vary for each person.
+              p
+                | Working with a team of designers? Create administrators
+                | to help you manage things.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Maintain control
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/permissions.png", alt="User permissions")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Easy permissions
+              p
+                | Clients can only make changes to parts of the page
+                | you&#8217;ve selected. This gives them the freedom to edit
+                | content without modifying your design.
+              p
+                | Surreal is flexible enough to give more or less
+                | control to each client depending on their skill
+                | level. Give novice clients less access and give
+                | seasoned editors more advanced privileges.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Track user activity
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/activity.png", alt="User activity")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Activity tracking
+              p
+                | See who&#8217;s editing what at a glance. Surreal tracks every
+                | change for up to six months. Need to revert to an older
+                | version? Just open it up and hit
+                em publish
+                | .
+              p
+                | You can enable change notifications for any site with
+                | just a click. When enabled, Surreal will send you an
+                | email whenever your clients publish changes.
+              p
+                | Prevent publishing conflicts with
+                a(href="blog/prevent-publishing-conflicts.html")
+                  | helpful
+                  | notifications
+                | that tell you when someone else
+                | is editing the same page.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Make it your own
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/branding.png", alt="White-label settings")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 White-label features
+              p
+                | Surreal was designed to be yours. Brand it as
+                | your own and resell it to clients. You can even
+                | access it from your own domain.
+              p
+                | Because of our &#8220;pay as you grow&#8221; model, many designers
+                | earn a profit by using Surreal. Our
+                a(href="pricing.html") pricing page
+                | explains how.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Legendary support
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/support.png", alt="Help request form")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Legendary support
+              p
+                | When you write to us, you will
+                em always
+                | hear
+                | back from a real person who knows Surreal CMS inside
+                | and out within 24 hours&#8212;even on weekends and holidays.
+              p
+                | Most requests are fully satisfied in just one message.
+                | We don&#8217;t mess around when it comes to getting you the
+                | support you need.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+  section.slim
+    .container
+      .row
+        .col-sm-10.col-sm-push-1
+          blockquote.testimonial
+            img(src="src/img/ryan-aestheticrain.jpg", alt="Ryan Nicholson of Aesthetic Rain")
+            q A beautiful example of what a straightforward CMS should be
+            cite
+              a(href="http://www.aestheticrain.com/", target="_blank")
+                | Ryan Nicholson, Aesthetic Rain
+  // For clients
+  section#for-clients.light
+    .container
+      h1 Perfect for clients
+      // Inline editing
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/inline-editing.png", alt="Inline editing")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Inline editing
+              p
+                | Surreal CMS is the first in its class to feature
+                | inline editing. Just click and type right on the
+                | page. It&#8217;s the easiest editor you&#8217;ll ever use.
+              p
+                | Most clients start using Surreal with little or
+                | no training. For everyone else, we provide a
+                a(href="docs/users-manual.html") users&#8217;s manual
+                | that you can customize as your own.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Simple publishing
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/revisions.png", alt="List of revisions")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Easy publishing
+              p
+                | Publish your changes right away, or save them as
+                | a draft and finish later. When you publish a page,
+                | your changes will be stored for up to six months
+                | for reference.
+              p
+                | Need to publish something at a certain date and
+                | time? Just hit
+                em auto-publish
+                | and tell us
+                | when.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Photo galleries
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/gallery.png", alt="Photo gallery")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Photo galleries
+              p
+                | Easily manage photo galleries and sliders. Drag
+                | and drop to reorder images. Surreal can even
+                | generate thumbnails for you automatically.
+              p
+                | Our gallery editor is flexible enough to integrate
+                | with many popular JavaScript galleries and sliders.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Analytics dashboard
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/analytics.png", alt="Analytics dashboard")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Analytics dashboard
+              p
+                | Link your account to Google Analytics to give
+                | your clients access to important information
+                | about their visitors.
+              p
+                | View a multitude of reports with interactive
+                | graphs for any date range. You never even
+                | have to leave the CMS.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // Mobile friendly
+      .row.feature-row
+        .col-md-6.col-md-push-6
+          .feature-image
+            img(src="src/img/features/responsive.png", alt="Responsive interface")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Mobile friendly UI
+              p
+                | Edit from the comfort of your desktop or make
+                | changes on the go with your tablet or phone.
+                | Surreal works great with most devices.
+              p
+                | You don&#8217;t have to download an app. Just open
+                | it up in your browser and start editing.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+      // So much more
+      .row.feature-row
+        .col-md-6(md="", <div="")
+          .icon-left
+            i.fa.fa-check.icon-success
+            h2 So much more
+            p
+              | It&#8217;s hard to cram all the goodness of Surreal
+              | into one page, but here are a few other things
+              | to look forward to:
+            ul.fa-ul
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Page properties
+                | editor with search engine preview
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Page templates
+                | for creating new pages
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Image editor
+                | for uploading, cropping, and resizing
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Repeatable regions
+                | for structured content
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong File manager
+                | for uploading and managing files
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Full source editing
+                | with syntax highlighting
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong Lockdown
+                | sites to prevent changes
+              li
+                i.fa.fa-li.fa-arrow-right
+                strong HTML5
+                | support
+              li
+                i.fa.fa-li.fa-arrow-right
+                | Available in over a dozen different languages!
+            p
+              | The best way to experience Surreal is to try it out
+              | on your own site. Got a minute? We&#8217;ll have you up
+              | and running in no time.
+            p
+              a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+  section
+    .container
+      .row
+        .col-sm-6.col-sm-push-3
+          form#signup-form.signup-form(data-jsonp="http://edit-content.com/src/ajax/signup.ajax.php")
+            h2 Try it free for 30 days!
+            p
+              | We just need a couple things before you can start editing.
+            .form-group
+              input.form-control.input-lg(type="text", name="name", placeholder="Name")
+            .form-group
+              input.form-control.input-lg(type="email", name="email", placeholder="Email")
+            .form-group
+              input.form-control.input-lg(type="password", name="password", placeholder="Choose a password")
+            .form-group
+              input.form-control.input-lg(type="text", name="organization", placeholder="Organization (optional)")
+            .form-group
+              | Creating an account indicates that you agree with our
+              a(href="terms.html") terms of service
+              | .
+            .signup-feedback.alert.alert-danger.hidden
+            .form-group
+              button.btn.btn-lg.btn-success(type="submit")
+                | Create my account
+              input(type="hidden", name="cmd", value="add-account")
+              img.form-loader(src="src/img/loaders/spinner.gif", alt="Loading")

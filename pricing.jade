@@ -1,0 +1,161 @@
+extends layout.jade
+block sections
+  section.intro
+    .container
+      h1.has-subtitle Start free and pay as you grow
+      p.subtitle Surreal makes it affordable to grow your business
+  section.light
+    .container
+      .row
+        .col-md-5.col-md-push-1.col-sm-6
+          h2 Free 30-day trial
+          p
+            | Try it free for a month and see if Surreal is right
+            | for you. You&#8217;ll have unrestricted access to all our
+            | features and support.
+          p
+            | If you like what you see, our tiered pricing makes
+            | it easy to grow your business with us. There are
+            | no hidden fees, and each plan comes with all features
+            | and our legendary support.
+          p
+            | For just a few dollars a month, you can offer
+            | your clients a full-featured, custom-branded content
+            | management solution that they&#8217;ll enjoy using.
+          p.call-to-action-buttons
+            a.btn.btn-success(href="signup.html") Start free trial
+            a.btn.btn-link(href="features.html") View features
+        .col-md-5.col-md-push-1.col-sm-6
+          table.table.table-pricing
+            thead
+              tr
+                th Sites
+                th Plan
+                th Monthly
+            tbody
+              tr
+                td
+                  strong 1&#8211;5
+                td
+                  strong Starter
+                td
+                  strong $10
+              tr
+                td 6&#8211;10
+                td Hobbyist
+                td $20
+              tr
+                td 11&#8211;25
+                td Freelancer
+                td $30
+              tr
+                td 26&#8211;50
+                td Professional
+                td $40
+              tr
+                td 51&#8211;100
+                td Expert
+                td $60
+              tr
+                td 101&#8211;500
+                td Studio
+                td $80
+              tr
+                td 500+
+                td Enterprise
+                td $100
+            tfoot
+              tr
+                td(colspan="3")
+                  i.fa.fa-asterisk
+                  | Save 10% by paying yearly
+                  br
+                  i.fa.fa-heart-o
+                  | Ask about our non-profit rates
+      .row
+        h1 It pays for itself
+        .col-sm-6
+          h3 A value-added service
+          p
+            | We encourage users to offset the cost of our service
+            | by charging clients a nominal monthly maintenance fee
+            | for their services. For example, many designers bill
+            | about $10 a month for a maintenance plan that includes
+            | the use of Surreal CMS.
+          p
+            | We recommend offering your clients an all-in-one
+            | maintenance plan that includes:
+          ul.fa-ul
+            li
+              i.fa.fa-li.fa-arrow-right
+              | Unlimited CMS access
+            li
+              i.fa.fa-li.fa-arrow-right
+              | Website analytics (via Google Analytics)
+            li
+              i.fa.fa-li.fa-arrow-right
+              | A limited number of design updates
+            li
+              i.fa.fa-li.fa-arrow-right
+              | Web hosting fees
+            li
+              i.fa.fa-li.fa-arrow-right
+              | Domain registration fees
+            li
+              i.fa.fa-li.fa-arrow-right
+              | Technical support
+          p
+            | The details are entirely up to you, but as you can see,
+            | with just two clients on a maintenance plan you can
+            | actually profit from using Surreal&#8212;not to mention all
+            | the extra time you&#8217;ll have by letting clients safely
+            | edit their own content.
+        .col-sm-6
+          h3 Cheaper than installables
+          p
+            | By far, the biggest concern new users have is the recurring
+            | cost of our service. Although we make it as affordable as
+            | possible, some argue that Surreal will never be as cheap as
+            | installable alternatives.
+          p
+            | However, there are many hidden costs to installable
+            | software&#8212;even free titles. We discuss some of these costs
+            | in
+            a(href="blog/why-saas-is-cheaper-than-installable-software.html")
+              | this
+              | article
+            | .
+          p
+            | If you&#8217;re still not sure about Software as a Service (SaaS),
+            a(href="contact.html") send us an email
+            | . We&#8217;ll be happy to
+            | go over some of the benefits with you.
+      p.call-to-action-buttons
+        a.btn.btn-success(href="signup.html") Start free trial
+        a.btn.btn-link(href="features.html") View features
+  section
+    .container
+      .row
+        .col-sm-6.col-sm-push-3
+          form#signup-form.signup-form(data-jsonp="http://edit-content.com/src/ajax/signup.ajax.php")
+            h2 Try it free for 30 days!
+            p
+              | We just need a couple things before you can start editing.
+            .form-group
+              input.form-control.input-lg(type="text", name="name", placeholder="Name")
+            .form-group
+              input.form-control.input-lg(type="email", name="email", placeholder="Email")
+            .form-group
+              input.form-control.input-lg(type="password", name="password", placeholder="Choose a password")
+            .form-group
+              input.form-control.input-lg(type="text", name="organization", placeholder="Organization (optional)")
+            .form-group
+              | Creating an account indicates that you agree with our
+              a(href="terms.html") terms of service
+              | .
+            .signup-feedback.alert.alert-danger.hidden
+            .form-group
+              button.btn.btn-lg.btn-success(type="submit")
+                | Create my account
+              input(type="hidden", name="cmd", value="add-account")
+              img.form-loader(src="src/img/loaders/spinner.gif", alt="Loading")

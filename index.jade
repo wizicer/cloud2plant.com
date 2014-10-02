@@ -1,0 +1,250 @@
+extends layout.jade
+block sections
+  section.dark
+    .container
+      h1.has-subtitle
+        | A hosted CMS for web designers
+      p.subtitle
+        | The perfect solution for freelancers, agencies, or anyone with a website
+      .row.text-center
+        .col-sm-4
+          span.circle.circle-lg.circle-blue
+            i.fa.fa-exchange.fa-rotate-90
+          h4 Connect to your website
+          p
+            | Nothing to download or install. Surreal does
+            | everything over FTP, SFTP, or Amazon&#160;S3.
+        .col-sm-4
+          span.circle.circle-lg.circle-green
+            i.fa.fa-file-text-o
+          h4 Define content regions
+          p
+            | Select which parts of the page clients can edit.
+            | Integrate without touching any code!
+        .col-sm-4
+          span.circle.circle-lg.circle-orange
+            i.fa.fa-pencil
+          h4 Edit your pages inline
+          p
+            | Editing is as simple as typing on the page.
+            | Your design is left intact and all changes are
+            | tracked.
+      .call-to-action-buttons
+        a.btn.btn-success(href="#surreal-in-six-steps") Learn more
+        a.btn.btn-link(href="signup.html") Sign up for a free trial
+  section#surreal-in-six-steps
+    .container
+      h1 Surreal CMS in six steps
+      .row
+        .col-md-8.col-md-push-2
+          .circle-left
+            span.circle.circle-blue.circle-white-icon
+              i.fa.fa-laptop
+            h3 1. Design your website
+            p
+              | Surreal gets out of the way and lets you design websites
+              | however you like. Use your favorite design tools and
+              | keep your current web host. All changes get published
+              | directly to your web server.
+            p
+              | There&#8217;s no need to install anything and you never have
+              | to worry about updates. Our only requirement is an FTP,
+              | SFTP, or Amazon&#160;S3 connection.
+          .circle-left
+            span.circle.circle-green.circle-white-icon
+              i.fa.fa-puzzle-piece
+            h3 2. Integrate with Surreal
+            p
+              | Once your website is online, connect to it with Surreal
+              | and select the pages you want to edit. Define content
+              | regions simply by clicking on the page. Clients will
+              | only be able to edit the content
+              em inside
+              | these
+              | regions.
+            p
+              | No coding is required, and you can have everything setup
+              | and ready to edit in less than two minutes.
+            p
+              i.fa.fa-video-camera
+              a(href="https://vimeo.com/101574186", target="_blank")
+                | Watch
+                | how it&#8217;s done in this short video!
+          .circle-left
+            span.circle.circle-orange.circle-white-icon
+              i.fa.fa-users
+            h3 3. Add your clients
+            p
+              | Give clients the ability to safely edit their websites.
+              | Set permissions for each user and limit access by site,
+              | page, and even feature.
+            p
+              | Add team members as administrators so they can help
+              | you manage things.
+          .circle-left
+            span.circle.circle-blue.circle-white-icon
+              i.fa.fa-tag
+            h3 4. Make it your own
+            p
+              | Customize Surreal and resell it as your own. Upload your
+              | logo, change the theme, and access the CMS from your own
+              | domain. There&#8217;s even a user&#8217;s manual you can rebrand and
+              | hand off to clients.
+            p
+              | We offer a complete white-label solution for your web
+              | design business.
+          .circle-left
+            span.circle.circle-green.circle-white-icon
+              i.fa.fa-truck
+            h3 5. Explore our features
+            p
+              | Surreal is chock-full of content management goodies.
+              | Save drafts and work on them later, or schedule them
+              | for publishing at a certain time. Link up to Google
+              | Analytics to see important visitor data right in the
+              | CMS. Keep things organized with the file manager.
+              | See who&#8217;s been editing what at a glance.
+            p
+              | There&#8217;s too much to mention, so come explore the many
+              a(href="features.html") great features
+              | that ship with
+              | Surreal&#160;CMS.
+          .circle-left
+            span.circle.circle-orange.circle-white-icon
+              i.fa.fa-comment.fa-flip-horizontal
+            h3 6. Get help when you need it
+            p
+              | Our support is unsurpassed. You will always hear
+              | back from someone who knows Surreal inside and out
+              | within 24 hours&#8212;often sooner&#8212;even on weekends and
+              | holidays.
+            p
+              | We&#8217;re passionate about the service we provide and
+              | want to make your experience the best it can possibly
+              | be. This is one of the many reasons we&#8217;ve been in
+              | service for over five years.
+      .call-to-action-buttons
+        a.btn.btn-success(href="signup.html") Sign up for a free trial
+        a.btn.btn-link(href="features.html") View features
+  section.light
+    .container
+      h1 Mobile-friendly design
+      .row
+        .col-lg-6.col-lg-push-5.col-md-6.col-md-push-6
+          img(src="src/img/devices.png", alt="Laptop, tablet, and phone")
+        .col-lg-4.col-lg-pull-5.col-md-5.col-md-pull-6
+          h3 Edit anywhere
+          p
+            | Work from the comfort of your desktop or make changes
+            | on the go with your tablet or phone. Surreal has a
+            | fully responsive interface that works great on any
+            | device.
+          p
+            | Don&#8217;t bother downloading an app. Just login with your
+            | favorite browser and you&#8217;re good to go.
+      .call-to-action-buttons
+        a.btn.btn-primary(href="signup.html") Sign up for a free trial
+        a.btn.btn-link(href="features.html") View features
+  section.slim
+    .container
+      .row
+        .col-sm-10.col-sm-push-1
+          blockquote.testimonial
+            img(src="src/img/mike-cmscritic.jpg", alt="Mike Johnston of CMS Critic")
+            q The devs have done an amazing job with this one
+            cite
+              a(href="http://www.cmscritic.com/surreal-cms-launches-v5-with-huge-improvements/", target="_blank")
+                | Mike Johnston, CMS Critic
+  section.light
+    .container
+      h1 Why a hosted CMS?
+      .row
+        .col-md-5.col-md-push-1.col-sm-6
+          .icon-left
+            i.fa.fa-puzzle-piece.icon-success
+            h3 Easy to integrate
+            p
+              | It takes less than two minutes to start editing
+              | your website. Your clients won&#8217;t even need
+              | training to start using Surreal.
+          .icon-left
+            i.fa.fa-clock-o.icon-success
+            h3 Saves you time
+            p
+              | Empower clients to make their own edits and spend more
+              | time doing what you love: designing, developing, or
+              | simply relaxing.
+          .icon-left
+            i.fa.fa-usd.icon-success
+            h3 Super affordable
+            p
+              | Resell the service to your clients and earn a profit
+              | from using Surreal. Our
+              em pay as you grown
+              | model
+              | makes it easy to get started.
+          .icon-left
+            i.fa.fa-flip-horizontal.fa-comment-o.icon-success
+            h3 Legendary support
+            p
+              | You&#8217;ll always hear back from someone who knows Surreal
+              | inside and out within 24 hours. Even on weekends and
+              | holidays.
+        .col-md-5.col-md-push-1.col-sm-6
+          .icon-left
+            i.fa.fa-magic.icon-success
+            h3 Tons of features
+            p
+              | Surreal comes with plenty of features that make
+              | editing easy and enjoyable. Your clients
+              | will love using it.
+          .icon-left
+            i.fa.fa-heart-o.icon-success
+            h3 Your own CMS
+            p
+              | Surreal was built to be a white-label service. Change
+              | the theme, upload your logo, and even access it from
+              | your own domain.
+          .icon-left
+            i.fa.fa-cloud-upload.icon-success
+            h3 Nothing to update
+            p
+              | We push bug fixes, new features, and updates on a
+              | regular basis so you never have to worry about
+              | software being out of date.
+          .icon-left
+            i.fa.fa-globe.icon-success
+            h3 Five years of service
+            p
+              | With more than five years of service, Surreal is
+              | one of the most mature and trusted content
+              | management services in the world.
+      .call-to-action-buttons
+        a.btn.btn-primary(href="signup.html") Sign up for a free trial
+        a.btn.btn-link(href="features.html") View features
+  section
+    .container
+      .row
+        .col-sm-6.col-sm-push-3
+          form#signup-form.signup-form(data-jsonp="http://edit-content.com/src/ajax/signup.ajax.php")
+            h2 Try it free for 30 days!
+            p
+              | We just need a couple things before you can start editing.
+            .form-group
+              input.form-control.input-lg(type="text", name="name", placeholder="Name")
+            .form-group
+              input.form-control.input-lg(type="email", name="email", placeholder="Email")
+            .form-group
+              input.form-control.input-lg(type="password", name="password", placeholder="Choose a password")
+            .form-group
+              input.form-control.input-lg(type="text", name="organization", placeholder="Organization (optional)")
+            .form-group
+              | Creating an account indicates that you agree with our
+              a(href="terms.html") terms of service
+              | .
+            .signup-feedback.alert.alert-danger.hidden
+            .form-group
+              button.btn.btn-lg.btn-success(type="submit")
+                | Create my account
+              input(type="hidden", name="cmd", value="add-account")
+              img.form-loader(src="src/img/loaders/spinner.gif", alt="Loading")
