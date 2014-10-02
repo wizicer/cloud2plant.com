@@ -1,4 +1,4 @@
-extends layout.jade
+extends layout\layout.jade
 block sections
   section.intro
     .container
@@ -133,29 +133,3 @@ block sections
       p.call-to-action-buttons
         a.btn.btn-success(href="signup.html") Start free trial
         a.btn.btn-link(href="features.html") View features
-  section
-    .container
-      .row
-        .col-sm-6.col-sm-push-3
-          form#signup-form.signup-form(data-jsonp="http://edit-content.com/src/ajax/signup.ajax.php")
-            h2 Try it free for 30 days!
-            p
-              | We just need a couple things before you can start editing.
-            .form-group
-              input.form-control.input-lg(type="text", name="name", placeholder="Name")
-            .form-group
-              input.form-control.input-lg(type="email", name="email", placeholder="Email")
-            .form-group
-              input.form-control.input-lg(type="password", name="password", placeholder="Choose a password")
-            .form-group
-              input.form-control.input-lg(type="text", name="organization", placeholder="Organization (optional)")
-            .form-group
-              | Creating an account indicates that you agree with our
-              a(href="terms.html") terms of service
-              | .
-            .signup-feedback.alert.alert-danger.hidden
-            .form-group
-              button.btn.btn-lg.btn-success(type="submit")
-                | Create my account
-              input(type="hidden", name="cmd", value="add-account")
-              img.form-loader(src="img/loaders/spinner.gif", alt="Loading")
