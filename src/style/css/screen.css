@@ -268,14 +268,14 @@ textarea {
     width: 200px;
     height: 36px;
     text-indent: -9999em;
-    background: url(../../img/logo-dark-2x.png) center no-repeat;
+    background: url(../img/logo-dark-2x.png) center no-repeat;
     background-size: contain;
     vertical-align: middle;
     display: inline-block;
 }
 
 .surreal-logo.surreal-logo-dark {
-    background-image: url(../../img/logo-light-2x.png);
+    background-image: url(../img/logo-light-2x.png);
 }
 
 body {

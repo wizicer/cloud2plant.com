@@ -9,7 +9,7 @@ module.exports = (grunt) ->
           banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n"
 
         files:
-          "js/main.min.js": ["js-dev/skillsdata.js", "js-dev/skill.js"]
+          "public/script/main.min.js": ["src/script/main.js"]
 
     less:
       dev:
@@ -41,8 +41,10 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true
+            cwd: 'src/jade'
             src: ['*.jade']
             ext: '.html'
+            dest: 'public'
           }
         ]
 
@@ -54,8 +56,10 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true
+            cwd: 'src/jade'
             src: ['*.jade']
             ext: '.html'
+            dest: 'public'
           }
         ]
 
@@ -64,12 +68,15 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true
-            src: ['css/**', 'js/**', 'font/**']
-            dest: '../source/about/'
+            cwd: 'src'
+            src: ['img/**'] #, 'lib/**']
+            dest: 'public'
           }
           {
-            src: ['index.html']
-            dest: '../source/about/'
+            expand: true
+            cwd: 'src/style/css'
+            src: ['*.css']
+            dest: 'public/style'
           }
         ]
 
@@ -87,15 +94,29 @@ module.exports = (grunt) ->
     watch:
       all:
         files: [
-          "**/*.html"
-          "**/*.js"
-          "**/*.css"
+          "src/**/*.html"
+          "src/**/*.js"
+          "src/**/*.css"
+          "src/**/*.jade"
+          "src/img/*"
         ]
         options:
           livereload: true
 
+      copy:
+        files: ["src/img/*", "src/**/*.css"]
+        tasks: ["copy"]
+        options:
+          livereload: true
+
+      uglify:
+        files: "src/script/*.js"
+        tasks: ["uglify"]
+        options:
+          livereload: true
+
       jade:
-        files: "**/*.jade"
+        files: "src/jade/*.jade"
         tasks: ["jade:dev"]
         options:
           livereload: true
@@ -118,19 +139,20 @@ module.exports = (grunt) ->
   # Default task(s).
   grunt.registerTask "default", [
     "jade:dev"
+    "uglify"
+    "copy"
     "express"
     "watch"
   ]
   grunt.registerTask "prod", [
-    "less:prod"
     "jade:prod"
     "uglify:prod"
   ]
-  grunt.registerTask "pub", [
-    "less:prod"
-    "jade:prod"
-    "uglify:prod"
-    "copy"
-  ]
+  # grunt.registerTask "pub", [
+  #   "less:prod"
+  #   "jade:prod"
+  #   "uglify:prod"
+  #   "copy"
+  # ]
   return
 
