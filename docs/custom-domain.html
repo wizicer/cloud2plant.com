@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.surrealcms.com/docs/custom-domain by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+<head>
+	<title>Docs &raquo; White-labeling &raquo; Using your own domain</title>
+	<meta name="description" content="Everything you need to know to get started with Surreal CMS.">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<link rel="stylesheet" href="../src/style/css/screen.css">
+	<script src="../src/script/min/surreal.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="/src/lib/respond/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<header>
+		<nav class="container">
+			<a href="../index.html" class="surreal-logo surreal-logo-dark">Surreal CMS</a>
+			<a href="#" class="mobile-menu-toggle"><i class="fa fa-bars"></i></a>
+			<span class="menu-items">
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="../blog/index.html">Blog</a>
+				<a href="index.html">Docs</a>
+				<a href="../contact.html">Contact</a>
+				<span class="extras">
+					<a href="http://edit-content.com/">Login</a>
+					<a class="signup" href="../signup.html">Sign up</a>
+				</span>
+			</span>
+		</nav>
+	</header>
+
+	<section class="light docs">
+		<div class="container">
+			<div class="row docs-row">
+				<div class="col-lg-9 col-md-8 col-sm-7">
+
+					<div class="docs-heading">
+						<h1>White-labeling</h1>
+						<h2>Using your own domain</h2>
+					</div>
+
+					<p>
+						As part of our white-label service, the CMS is hosted on a generic domain
+						called <code>edit-content.com</code>. If you prefer to use your own domain
+						instead, you can follow these steps:
+					</p>
+					<ol>
+						<li>Login to your domain registrar’s control panel</li>
+						<li>Navigate to the DNS management section</li>
+						<li>Create a CNAME record that points to <code>edit-content.com</code></li>
+					</ol>
+					<p>
+						Once you’ve created the CNAME record, it may take up to 24 hours for DNS changes
+						to propagate. After that, you should be able to access the CMS from the custom domain
+						you selected.
+					</p>
+					<div class="alert alert-info">
+						<p>
+							For more detailed instructions on how to create a CNAME record, please contact
+							your domain registrar.
+						</p>
+					</div>
+					<div class="alert alert-warning">
+						<p>
+							Due to the way SSL certificates work, it is not possible to access custom
+							domains over SSL without receiving a certificate error notification. However,
+							SSL connections are not needed for clients as no sensitive data is sent
+							during their session. We only recommend using SSL while adding and editing
+							sites so sensitive FTP credentials will be safe.
+						</p>
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-5">
+<div class="panel-group docs-nav">
+
+	<!-- Integration -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-gear"></i>
+				<span class="menu-item">Integration</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="index.html">Getting started</a></li>
+				<li><a href="encoding.html">Character encoding</a></li>
+				<li><a href="page-properties.html">Page properties</a></li>
+				<li><a href="content-regions.html">Content regions</a></li>
+				<li><a href="photo-galleries.html">Photo galleries</a></li>
+				<li><a href="repeatable-regions.html">Repeatable regions</a></li>
+				<li><a href="url-formatting.html">URL formatting</a></li>
+				<li><a href="include-files.html">Include files</a></li>
+				<li><a href="detecting-the-cms.html">Detecting the CMS</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Users -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-user"></i>
+				<span class="menu-item">Users</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="permissions.html">Permissions &amp; privileges</a></li>
+				<li><a href="impersonating.html">Impersonating</a></li>
+				<li><a href="welcome-messages.html">Welcome messages</a></li>
+				<li><a href="activity.html">Activity</a></li>
+				<li><a href="help-requests.html">Help requests</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Sites -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-globe"></i>
+				<span class="menu-item">Sites</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="site-settings.html">Site settings</a></li>
+				<li><a href="templates.html">Page templates</a></li>
+				<li><a href="custom-styles.html">Custom styles</a></li>
+				<li><a href="change-notifications.html">Change notifications</a></li>
+				<li><a href="analytics.html">Analytics</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Pages -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-file"></i>
+				<span class="menu-item">Pages</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="enabling-pages.html">Enabling pages</a></li>
+				<li><a href="page-labels.html">Page labels</a></li>
+				<li><a href="creating-pages.html">Creating pages</a></li>
+				<li><a href="revisions.html">Drafts &amp; revisions</a></li>
+				<li><a href="live-editor.html">Live Editor</a></li>
+				<li><a href="source-editor.html">Source editor</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- White-labeling -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-tag"></i>
+				<span class="menu-item">White-labeling</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="branding.html">Custom branding</a></li>
+				<li><a href="custom-domain.html">Using your own domain</a></li>
+				<li><a href="custom-login.html">Building a custom login form</a></li>
+				<li><a href="users-manual.html">User’s manual</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Resources -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-book"></i>
+				<span class="menu-item">Resources</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="faq.html">Frequently asked questions</a></li>
+				<li><a href="../tuts/index.html">Tutorials</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<nav>
+				<a href="../index.html" class="surreal-logo surreal-logo-light">Surreal CMS</a>
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="../blog/index.html">Blog</a>
+				<a href="index.html">Docs</a>
+				<a href="../tuts/index.html">Tutorials</a>
+				<a href="../terms.html">Terms</a>
+				<a href="../contact.html">Contact</a>
+			</nav>
+			<p class="copyright">
+				&copy;2014 Surreal CMS &bull;
+				A service of <a href="http://www.abeautifulsite.net/">A Beautiful Site, LLC.</a>
+			</p>
+		</div>
+	</footer>
+
+
+	<!-- GA -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6412891-3', 'auto');
+	ga('send', 'pageview');
+	</script>
+
+	<!-- AdRoll -->
+	<script type="text/javascript">
+	adroll_adv_id = "XUMA26WSEJCHLHOY5AFOY6";
+	adroll_pix_id = "SDVH4G5WLZF5RGQISCQUPU";
+	(function () {
+	var oldonload = window.onload;
+	window.onload = function(){
+	   __adroll_loaded=true;
+	   var scr = document.createElement("script");
+	   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+	   scr.setAttribute('async', 'true');
+	   scr.type = "text/javascript";
+	   scr.src = host + "/j/roundtrip.js";
+	   ((document.getElementsByTagName('head') || [null])[0] ||
+	    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+	   if(oldonload){oldonload()}};
+	}());
+	</script>
+
+
+</body>
+
+<!-- Mirrored from www.surrealcms.com/docs/custom-domain by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+</html>

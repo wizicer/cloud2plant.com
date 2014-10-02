@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.surrealcms.com/docs/site-settings by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+<head>
+	<title>Docs &raquo; Sites &raquo; Site settings</title>
+	<meta name="description" content="Everything you need to know to get started with Surreal CMS.">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<link rel="stylesheet" href="../src/style/css/screen.css">
+	<script src="../src/script/min/surreal.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="/src/lib/respond/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<header>
+		<nav class="container">
+			<a href="../index.html" class="surreal-logo surreal-logo-dark">Surreal CMS</a>
+			<a href="#" class="mobile-menu-toggle"><i class="fa fa-bars"></i></a>
+			<span class="menu-items">
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="../blog/index.html">Blog</a>
+				<a href="index.html">Docs</a>
+				<a href="../contact.html">Contact</a>
+				<span class="extras">
+					<a href="http://edit-content.com/">Login</a>
+					<a class="signup" href="../signup.html">Sign up</a>
+				</span>
+			</span>
+		</nav>
+	</header>
+
+	<section class="light docs">
+		<div class="container">
+			<div class="row docs-row">
+				<div class="col-lg-9 col-md-8 col-sm-7">
+
+					<div class="docs-heading">
+						<h1>Sites</h1>
+						<h2>Site settings</h2>
+					</div>
+
+					<p>
+						Because of our unique platform, you can manage multiple sites on various
+						web hosts all from one place. We support FTP, SFTP, and even sites hosted
+						on Amazon S3. If it’s on the web, you can probably edit it with Surreal.
+					</p>
+
+					<h3>Types of sites</h3>
+					<p>
+						Sites can be configured as regular sites, subsites, or subdomains. A subsite
+						looks like this:
+					</p>
+<pre>
+http://example.com/something/
+</pre>
+					<p>
+						Whereas a subdomain looks like this:
+					</p>
+<pre>
+something.example.com
+</pre>
+					<p>
+						A subsite is essentially a folder inside of a regular site. Surreal
+						supports subsites, but each one you create will count as its own site
+						in terms of billing. Subdomains also count as their own site.
+					</p>
+
+					<h3>Connection issues</h3>
+					<p>
+						If you have trouble connecting to your site, try the following:
+					</p>
+					<ul>
+						<li>For FTP and SFTP, double check your username and password</li>
+						<li>For Amazon S3, double check your bucket name, access key, and secret key</li>
+						<li>Make sure that you’re using the right port (the defaults are 21 for FTP and 22 for SFTP)</li>
+						<li>For FTP, try removing the <code>ftp.</code> prefix from the Server field</li>
+					</ul>
+					<p>
+						If all else fails, try connecting with the exact same credentials using an
+						<a href="http://filezilla-project.org/download.php" target="_blank">FTP client</a>.
+						If the connection fails, chances are there’s a problem with your username, password,
+						or FTP configuration. If it succeeds, your host may be blocking access to the CMS.
+						At this point, you should contact your hosting company and ask them to
+						whitelist the IP address for <code>edit-content.com</code>.
+					</p>
+					<div class="alert alert-info">
+						<p>
+							Surreal has limited support for FTPS (FTP over TLS). You can connect
+							using explicit connections, but implicit connections won’t work.
+						</p>
+					</div>
+
+					<h3>Finding your home folder</h3>
+					<p>
+						Your home folder is the folder that contains the homepage of your site, subsite,
+						or subdomain. When you visit the URL you typed in the URL field, the resulting
+						page should exist at the top level of your home folder. Common examples of home
+						folders are <code>/www/</code>, <code>/httpdocs/</code>, and <code>/public_html/</code>.
+					</ul>
+					<div class="alert alert-warning">
+						<p>
+							It is critical that your home folder maps correctly to your site’s URL, otherwise
+							the CMS won’t be able to generate paths to pages and other resources properly.
+						</p>
+					</div>
+
+					<h3>Documents, images, and media</h3>
+					<p>
+						You can set custom paths for documents, images and media using the <em>Advanced</em>
+						tab in the <em>Edit Site</em> section. When a custom path is set, the shortcuts
+						in the file manager will provide an easy way for users to navigate when working
+						with files on the server.
+					</p>
+
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-5">
+<div class="panel-group docs-nav">
+
+	<!-- Integration -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-gear"></i>
+				<span class="menu-item">Integration</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="index.html">Getting started</a></li>
+				<li><a href="encoding.html">Character encoding</a></li>
+				<li><a href="page-properties.html">Page properties</a></li>
+				<li><a href="content-regions.html">Content regions</a></li>
+				<li><a href="photo-galleries.html">Photo galleries</a></li>
+				<li><a href="repeatable-regions.html">Repeatable regions</a></li>
+				<li><a href="url-formatting.html">URL formatting</a></li>
+				<li><a href="include-files.html">Include files</a></li>
+				<li><a href="detecting-the-cms.html">Detecting the CMS</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Users -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-user"></i>
+				<span class="menu-item">Users</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="permissions.html">Permissions &amp; privileges</a></li>
+				<li><a href="impersonating.html">Impersonating</a></li>
+				<li><a href="welcome-messages.html">Welcome messages</a></li>
+				<li><a href="activity.html">Activity</a></li>
+				<li><a href="help-requests.html">Help requests</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Sites -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-globe"></i>
+				<span class="menu-item">Sites</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="site-settings.html">Site settings</a></li>
+				<li><a href="templates.html">Page templates</a></li>
+				<li><a href="custom-styles.html">Custom styles</a></li>
+				<li><a href="change-notifications.html">Change notifications</a></li>
+				<li><a href="analytics.html">Analytics</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Pages -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-file"></i>
+				<span class="menu-item">Pages</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="enabling-pages.html">Enabling pages</a></li>
+				<li><a href="page-labels.html">Page labels</a></li>
+				<li><a href="creating-pages.html">Creating pages</a></li>
+				<li><a href="revisions.html">Drafts &amp; revisions</a></li>
+				<li><a href="live-editor.html">Live Editor</a></li>
+				<li><a href="source-editor.html">Source editor</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- White-labeling -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-tag"></i>
+				<span class="menu-item">White-labeling</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="branding.html">Custom branding</a></li>
+				<li><a href="custom-domain.html">Using your own domain</a></li>
+				<li><a href="custom-login.html">Building a custom login form</a></li>
+				<li><a href="users-manual.html">User’s manual</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Resources -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<i class="fa fa-book"></i>
+				<span class="menu-item">Resources</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			<ul class="nav">
+				<li><a href="faq.html">Frequently asked questions</a></li>
+				<li><a href="../tuts/index.html">Tutorials</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<nav>
+				<a href="../index.html" class="surreal-logo surreal-logo-light">Surreal CMS</a>
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="../blog/index.html">Blog</a>
+				<a href="index.html">Docs</a>
+				<a href="../tuts/index.html">Tutorials</a>
+				<a href="../terms.html">Terms</a>
+				<a href="../contact.html">Contact</a>
+			</nav>
+			<p class="copyright">
+				&copy;2014 Surreal CMS &bull;
+				A service of <a href="http://www.abeautifulsite.net/">A Beautiful Site, LLC.</a>
+			</p>
+		</div>
+	</footer>
+
+
+	<!-- GA -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6412891-3', 'auto');
+	ga('send', 'pageview');
+	</script>
+
+	<!-- AdRoll -->
+	<script type="text/javascript">
+	adroll_adv_id = "XUMA26WSEJCHLHOY5AFOY6";
+	adroll_pix_id = "SDVH4G5WLZF5RGQISCQUPU";
+	(function () {
+	var oldonload = window.onload;
+	window.onload = function(){
+	   __adroll_loaded=true;
+	   var scr = document.createElement("script");
+	   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+	   scr.setAttribute('async', 'true');
+	   scr.type = "text/javascript";
+	   scr.src = host + "/j/roundtrip.js";
+	   ((document.getElementsByTagName('head') || [null])[0] ||
+	    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+	   if(oldonload){oldonload()}};
+	}());
+	</script>
+
+
+</body>
+
+<!-- Mirrored from www.surrealcms.com/docs/site-settings by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+</html>

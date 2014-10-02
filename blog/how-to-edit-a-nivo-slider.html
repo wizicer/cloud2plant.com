@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.surrealcms.com/blog/how-to-edit-a-nivo-slider by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>How to edit a Nivo slider &middot; Surreal CMS blog</title>
+	<meta name="description" content="Give clients the power to safely and easily edit their content.">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<link rel="stylesheet" href="../src/style/css/screen.css">
+	<script src="../src/script/min/surreal.min.js"></script>
+	<!--[if lte IE 8]>
+	<script src="/src/lib/respond/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="wp-content/themes/surrealcms/style.css" />
+<link rel='stylesheet' id='advanced-responsive-video-embedder-plugin-styles-css'  href='wp-content/plugins/advanced-responsive-video-embedder/public/assets/css/publicce52.css?ver=5.0.2' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='V5 launches!' href='http://www.surrealcms.com/blog/v5-launches' />
+<link rel='next' title='Working with HTTP authentication' href='working-with-http-authentication.html' />
+
+<link rel='canonical' href='how-to-edit-a-nivo-slider.html' />
+<link rel='shortlink' href='http://www.surrealcms.com/blog/?p=155' />
+<style type="text/css">.arve-thumb-wrapper { max-width: 300px; }.arve-normal-wrapper.alignleft, .arve-normal-wrapper.alignright, .arve-normal-wrapper.aligncenter { max-width: 400px; }</style>
+</head>
+<body class="blog ">
+
+	<header>
+		<nav class="container">
+			<a href="../index.html" class="surreal-logo surreal-logo-dark">Surreal CMS</a>
+			<a href="#" class="mobile-menu-toggle"><i class="fa fa-bars"></i></a>
+			<span class="menu-items">
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="index.html">Blog</a>
+				<a href="../docs/index.html">Docs</a>
+				<a href="../contact.html">Contact</a>
+				<span class="extras">
+					<a href="http://edit-content.com/">Login</a>
+					<a class="signup" href="../signup.html">Sign up</a>
+				</span>
+			</span>
+		</nav>
+	</header>
+
+	<section class="light">
+		<div class="container">
+			<h1 class="has-subtitle blog-title">How to edit a Nivo slider</h1>
+			<p class="subtitle blog-date">January 30, 2014</p>
+			<div class="row">
+				<div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1 col-sm-12">
+					<article class="blog-article">
+						<p>Sliders have become a staple of modern web design, and <a href="http://docs.dev7studios.com/jquery-plugins/nivo-slider">Nivo Slider</a> is one of the best around. This tutorial will show you how to make your sliders editable with Surreal CMS.</p>
+<p>Before you get started, make sure you’re already including the necessary scripts and stylesheets on your page. For details on how to do this, refer to the <a href="http://docs.dev7studios.com/jquery-plugins/nivo-slider#jumpNav-2">Nivo Slider website</a>.</p>
+<h3>The Markup</h3>
+<p>Surreal generates <a href="../docs/photo-galleries.html">simple, semantic markup</a> for its photo galleries. To make them work with Nivo Slider, we’ll need to use a bit of JavaScript to shim the HTML.</p>
+<p>Since Nivo Slider uses the image’s <code>title</code> attribute for captions, we’ll need to copy it over from the <code>alt</code> attribute. Here’s an example of the markup Surreal will produce:</p>
+<pre class="html">&lt;div id="my-gallery" class="editable-gallery"&gt;
+    &lt;img src="thumb.jpg" alt="Your Description"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+<p>And here’s the markup Nivo Slider wants us to use:</p>
+<pre class="html">&lt;div id="my-gallery" class="editable-gallery"&gt;
+    &lt;img src="full.jpg" title="Caption here"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+<div class="alert alert-info">
+<p>Nivo Slider also supports links around each slide. You can edit or remove them in the photo gallery editor.</p>
+</div>
+<h3>The shim</h3>
+<p>To get from the markup that Surreal outputs to the markup that Nivo Slider requires, we’ll only need to do one thing:</p>
+<ul>
+<li>Copy the image’s <code>alt</code> attribute over to its <code>title</code> attribute</li>
+</ul>
+<p>Here’s what the code looks like:</p>
+<pre class="javascript">$(document).ready( function() {
+
+    // Don't execute if we're in the Live Editor
+    if( !window.isCMS ) {
+
+        // Set the `title` attribute based on the `alt` attribute
+        $('.nivoSlider').find('img').each( function() {
+            $(this).attr('title', $(this).attr('alt'))
+        });
+
+        // Initialize the slider
+        $(window).load( function() {
+            $('#nivo-slider').nivoSlider();
+        });
+
+    }
+
+});
+</pre>
+<div class="alert alert-warning">
+<p>Always place your shim <em>inside</em> a <code>$(document).ready()</code> callback and remember to use <code>$(window).load()</code> to initalize Nivo Slider!</p>
+</div>
+<h3>How it works</h3>
+<p>The script loops through each slider on the page and copies over each image’s <code>alt</code> attribute to its <code>title</code> attribute. This tells Nivo Slider to use it as a caption.</p>
+<p>Then it initializes the slider according to the options you set, if any. For more information about initializing Nivo Slider, refer to <a href="http://docs.dev7studios.com/jquery-plugins/nivo-slider#jumpNav-5">their documentation</a>.</p>
+<h3>Live demo</h3>
+<p>We created a <a href="http://www.example-website.net/tuts/nivo-slider.php">live demo</a> over on our example website to demonstrate a slideshow powered by Nivo Slider. If you have any questions about how things work, send us a help request and we’ll be happy to clear things up!</p>
+					</article>
+					<div class="blog-footer">
+						Like what we’re doing here?
+						<a href="http://twitter.com/surrealcms">Follow us on Twitter</a>
+						to stay up to date.
+						<hr>
+						<a class="btn btn-primary" href="index.html"></i> Back to the blog</a>
+					</div>
+
+										<!--cms-disable-->
+					<div class="blog-comments">
+						<!-- Comments via Disqus -->
+						<div id="disqus_thread"></div>
+						<script type="text/javascript">
+							var disqus_shortname = 'surrealcms';
+							var disqus_category_id = '2869621'; // blog
+							(function() {
+								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					</div>
+					<!--/cms-disable-->
+									</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<nav>
+				<a href="../index.html" class="surreal-logo surreal-logo-light">Surreal CMS</a>
+				<a href="../features.html">Features</a>
+				<a href="../pricing.html">Pricing</a>
+				<a href="index.html">Blog</a>
+				<a href="../docs/index.html">Docs</a>
+				<a href="../tuts/index.html">Tutorials</a>
+				<a href="../terms.html">Terms</a>
+				<a href="../contact.html">Contact</a>
+			</nav>
+			<p class="copyright">
+				&copy;2014 Surreal CMS &bull;
+				A service of <a href="http://www.abeautifulsite.net/">A Beautiful Site, LLC.</a>
+			</p>
+		</div>
+	</footer>
+
+
+	<!-- GA -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-6412891-3', 'auto');
+	ga('send', 'pageview');
+	</script>
+
+	<!-- AdRoll -->
+	<script type="text/javascript">
+	adroll_adv_id = "XUMA26WSEJCHLHOY5AFOY6";
+	adroll_pix_id = "SDVH4G5WLZF5RGQISCQUPU";
+	(function () {
+	var oldonload = window.onload;
+	window.onload = function(){
+	   __adroll_loaded=true;
+	   var scr = document.createElement("script");
+	   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+	   scr.setAttribute('async', 'true');
+	   scr.type = "text/javascript";
+	   scr.src = host + "/j/roundtrip.js";
+	   ((document.getElementsByTagName('head') || [null])[0] ||
+	    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+	   if(oldonload){oldonload()}};
+	}());
+	</script>
+
+
+</body>
+
+<!-- Mirrored from www.surrealcms.com/blog/how-to-edit-a-nivo-slider by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Oct 2014 01:54:28 GMT -->
+</html>
