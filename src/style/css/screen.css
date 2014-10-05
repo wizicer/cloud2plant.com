@@ -264,18 +264,18 @@ textarea {
     box-shadow: none;
 }
 
-.surreal-logo {
-    width: 200px;
-    height: 36px;
-    text-indent: -9999em;
-    background: url(../img/logo-dark-2x.png) center no-repeat;
-    background-size: contain;
+.c2p-logo {
+    /* width: 200px; */
+    /* height: 36px; */
+    /* text-indent: -9999em; */
+    /* background: url(../img/logo-dark-2x.png) center no-repeat; */
+    /* background-size: contain; */
     vertical-align: middle;
     display: inline-block;
 }
 
-.surreal-logo.surreal-logo-dark {
-    background-image: url(../img/logo-light-2x.png);
+.c2p-logo.c2p-logo-dark {
+    /* background-image: url(../img/logo-light-2x.png); */
 }
 
 body {
@@ -806,7 +806,7 @@ form.form-busy .form-loader {
         height: 50px;
     }
 
-    header nav .surreal-logo {
+    header nav .c2p-logo {
         position: absolute;
         top: 0;
         left: 20px;
@@ -936,7 +936,7 @@ form.form-busy .form-loader {
         display: inline-block;
     }
 
-    footer nav a.surreal-logo {
+    footer nav a.c2p-logo {
         display: block;
         margin: 0 auto 30px;
     }

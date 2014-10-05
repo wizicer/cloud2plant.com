@@ -4,40 +4,28 @@ block sections
     .container
       .row
         .col-sm-6.col-sm-push-3
-          form#contact-form.contact-form
-            h2 Contact us
-            p
-              | If you already have an account with us, please
-              a(href="http://edit-content.com/help")
-                | submit a
-                | help request
-              | for faster service.
-            .form-group
-              input.form-control.input-lg(type="text", name="name", placeholder="Name", autofocus="")
-            .form-group
-              input.form-control.input-lg(type="email", name="email", placeholder="Email")
-            .form-group
-              textarea.form-control.input-lg(name="message", placeholder="Message", rows="8")
-            .feedback.alert.alert-danger.hidden
-            .form-group
-              button.btn.btn-lg.btn-success(type="submit")
-                | Send my message
-              input(type="hidden", name="cmd", value="contact")
-              img.form-loader(src="img/loaders/spinner.gif", alt="Loading")
-  section.light
-    .container
-      .row
-        .col-sm-6.col-sm-push-3
-          // <h2>Surreal on Twitter</h2>
-          // <p>
-          // Send tweets to <a href="http://www.twitter.com/">@surrealcms</a>.
-          // </p>
-          // <!&#45;&#45; Twitter widget &#45;&#45;>
-          // <a class="twitter&#45;timeline" href="https://twitter.com/surrealcms" data&#45;widget&#45;id="427904171975536640">Tweets by @surrealcms</a>
-          // <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter&#45;wjs");</script>
-          // 
-          // <!&#45;&#45; Follow button &#45;&#45;>
-          // <div class="follow&#45;button">
-          // <a href="https://twitter.com/surrealcms" class="twitter&#45;follow&#45;button" data&#45;show&#45;count="false" data&#45;size="large">Follow @surrealcms</a>
-          // <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter&#45;wjs');</script>
-          // </div>
+        :markdown
+          ## Contact us
+          Currently we are in internal accellerating status, so we only invite 
+          friends to our alpha try-run, if you still have interesting, 
+          you can drop us a [email](mailto:invite@plant2cloud.com?subject=interesting%20in%20cloud2plant)
+        //-form#contact-form.contact-form
+        //-  h2 Contact us
+        //-  p
+        //-    | If you already have an account with us, please
+        //-    a(href="http://edit-content.com/help")
+        //-      | submit a
+        //-      | help request
+        //-    | for faster service.
+        //-  .form-group
+        //-    input.form-control.input-lg(type="text", name="name", placeholder="Name", autofocus="")
+        //-  .form-group
+        //-    input.form-control.input-lg(type="email", name="email", placeholder="Email")
+        //-  .form-group
+        //-    textarea.form-control.input-lg(name="message", placeholder="Message", rows="8")
+        //-  .feedback.alert.alert-danger.hidden
+        //-  .form-group
+        //-    button.btn.btn-lg.btn-success(type="submit")
+        //-      | Send my message
+        //-    input(type="hidden", name="cmd", value="contact")
+        //-    img.form-loader(src="img/loaders/spinner.gif", alt="Loading")

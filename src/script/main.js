@@ -23,11 +23,6 @@ $(document).ready(function() {
             scrollTop: s.offset().top - 1.4 * r
         }, e, t)
     });
-    // window.isCMS || ($("pre.css").snippet("css", n);
-    // $("pre.html").snippet("html", n);
-    // $("pre.javascript").snippet("javascript", n);
-    // $("pre.php").snippet("php", n);
-    // $("pre.xml").snippet("xml", n));
     $('a[href="/signup"]').on("click", function(n) {
         var s = $("#signup-form"),
             r = $("header").outerHeight();
@@ -69,7 +64,7 @@ $(document).ready(function() {
             o = t.find('textarea[name="message"]');
         e.preventDefault();
         t.hasClass("form-busy") || t.addClass("form-busy", !0).find(".contact-feedback").addClass("hidden");
-        $.post("/src/ajax/surreal.ajax.php", t.serialize(), function(e) {
+        $.post("/src/ajax/c2p.ajax.php", t.serialize(), function(e) {
             t.removeClass("form-busy");
             if ("success" === e.status){
               t.find(":input").prop("disabled", !0);
