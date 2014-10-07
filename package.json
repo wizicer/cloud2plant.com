@@ -9,6 +9,8 @@
     "grunt-express": "~1.4.1",
     "grunt-contrib-uglify": "~0.5.1",
     "markdown": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-gh-pages": "~0.9.1"
   }
 }

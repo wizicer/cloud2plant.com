@@ -78,7 +78,20 @@ module.exports = (grunt) ->
             src: ['*.css']
             dest: 'public/style'
           }
+          {
+            expand: true
+            cwd: 'src/assets'
+            src: ['**']
+            dest: 'public'
+          }
         ]
+    clean:
+      prod: [ 'public' ]
+
+    'gh-pages':
+      options:
+        base: 'public'
+      src: '**/*'
 
     express:
       all:
@@ -134,7 +147,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-express"
+  grunt.loadNpmTasks "grunt-gh-pages"
   
   # Default task(s).
   grunt.registerTask "default", [
@@ -144,15 +159,12 @@ module.exports = (grunt) ->
     "express"
     "watch"
   ]
-  grunt.registerTask "prod", [
+  grunt.registerTask "publish", [
+    "clean"
     "jade:prod"
     "uglify:prod"
+    "copy"
+    "gh-pages"
   ]
-  # grunt.registerTask "pub", [
-  #   "less:prod"
-  #   "jade:prod"
-  #   "uglify:prod"
-  #   "copy"
-  # ]
   return
 
