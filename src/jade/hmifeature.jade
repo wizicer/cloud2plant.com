@@ -1,5 +1,63 @@
 extends layout\layout.jade
 block sections
+  section.intro
+    .container
+      h1.has-subtitle Powerful features
+      p.subtitle Easy to setup, hard to put down
+  section#cloudhmi-in-five-steps
+    .container
+      h1 Cloud HMI in five steps
+      .row
+        .col-md-8.col-md-push-2
+          .circle-left
+            span.circle.circle-blue.circle-white-icon
+              i.fa.fa-laptop
+            h3 1. Deploy Cloud2HMI
+            :markdown
+          .circle-left
+            span.circle.circle-green.circle-white-icon
+              i.fa.fa-plug
+            h3 2. Connect to your plant devices
+          .circle-left
+            span.circle.circle-orange.circle-white-icon
+              i.fa.fa-pencil
+            h3 3. Edit HMI in your browser
+          .circle-left
+            span.circle.circle-blue.circle-white-icon
+              i.fa.fa-mobile
+            h3 4. One-click publish
+          .circle-left
+            span.circle.circle-green.circle-white-icon
+              i.fa.fa-truck
+            h3 5. Explore it in different devices
+      .call-to-action-buttons
+        //-a.btn.btn-success(href="signup.html") Sign up for a free trial
+        a.btn.btn-success(href="hmifeature.html") View features
+  section#for-designers.light
+    .container
+      h1 Made for designers
+      // Everything in one place
+      .row.feature-row
+        .col-md-6.co.col-md-push-6
+          .feature-image
+            img(src="img/features/sites.png", alt="")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              h2 Multiple websites
+              p
+                | Manage multiple sites and clients from one account
+                | without installing any software. Surreal does its
+                | magic with just an FTP, SFTP, or Amazon S3 connection.
+              p
+                | Integrate with new and existing websites. Since all
+                | files stay on
+                em your server
+                | , you&#8217;re never
+                | locked into our service.
+              p
+                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
   section
     .container
       .row

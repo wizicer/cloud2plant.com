@@ -290,7 +290,7 @@ header {
     left: 0;
     width: 100%;
     height: 60px;
-    background: #243647;
+    background: #4D6B53;
     font-size: 14px;
     line-height: 60px;
 }
@@ -304,7 +304,7 @@ header nav {
 }
 
 header nav a {
-    color: #5983ab;
+    color: #30271E;
     font-weight: 300;
     margin-right: 30px;
     -webkit-transition: .2s color;
@@ -312,7 +312,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #8ca9c5;
+    color: #E7BE4A;
     text-decoration: none;
 }
 
@@ -395,7 +395,7 @@ section.light h1 {
 }
 
 section.light h2,section.light h3,section.light h4,section.light h5,section.light h6 {
-    color: #243647;
+    color: #4D6B53;
 }
 
 section.light hr {
@@ -431,8 +431,8 @@ section.light .btn-link:hover {
 }
 
 section.dark {
-    background: #243647;
-    color: #5983ab;
+    background: #4D6B53;
+    color: #8CA296;
 }
 
 section.dark h1 {
@@ -514,6 +514,25 @@ footer .copyright {
 
 footer .copyright a {
     margin: 0;
+}
+
+.cloud {
+    width: 176px;
+    height: 148px;
+    text-indent: -9999em;
+    display: inline-block;
+}
+
+.cloud-hmi {
+    background: url('../img/cloud-hmi.png');
+}
+
+.cloud-plc {
+    background: url('../img/cloud-plc.png');
+}
+
+.cloud-dcs {
+    background: url('../img/cloud-dcs.png');
 }
 
 .circle {
@@ -842,9 +861,9 @@ form.form-busy .form-loader {
         opacity: 0;
         filter: alpha(opacity=0);
         margin-top: 50px;
-        background: #1b2936;
-        border-top: solid 2px #1b2936;
-        border-bottom: solid 2px #1b2936;
+        background: #4D6B53;
+        border-top: solid 2px #4D6B53;
+        border-bottom: solid 2px #4D6B53;
         line-height: 3;
         font-size: 16px;
         display: block;
@@ -862,7 +881,7 @@ form.form-busy .form-loader {
     }
 
     header nav .menu-items a:hover {
-        background-color: #243647;
+        background-color: #4D6B53;
     }
 
     header nav .menu-items .extras {

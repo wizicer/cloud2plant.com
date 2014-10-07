@@ -1,3 +1,7 @@
+mixin links
+  a(href="hmifeature.html") Cloud HMI
+  //- a(href="pricing.html") Pricing
+  
 doctype html
 html
   head
@@ -21,8 +25,7 @@ html
         a.mobile-menu-toggle(href="#")
           i.fa.fa-bars
         span.menu-items
-          a(href="hmifeature.html") Cloud HMI
-          //- a(href="pricing.html") Pricing
+          +links
           //- a(href="http://icerdesign.com") Blog
           a(href="contact.html") Contact
           span.extras
@@ -33,11 +36,11 @@ html
       .container
         nav
           a.c2p-logo.c2p-logo-light(href="index.html") Cloud 2 Plant
-          a(href="hmifeature.html") Cloud HMI
-          //- a(href="pricing.html") Pricing
-          a(href="http://icerdesign.com") Blog
+          +links
+          a(href="http://icerdesign.com", target="_blank") Blog
           //- a(href="terms.html") Terms
           a(href="contact.html") Contact
+          script(language="javascript", type="text/javascript", src="http://js.users.51.la/17278963.js")
         p.copyright
           | &#169;2014 Cloud 2 Plant &#8226;
           | Created by 

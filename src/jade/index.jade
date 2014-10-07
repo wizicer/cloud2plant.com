@@ -8,7 +8,7 @@ block sections
         | without putting your data into risk
       .row.text-center
         .col-sm-4
-          span.circle.circle-lg.circle-blue
+          span.circle.circle-lg.circle-orange
             i.fa.fa-cloud
           h4 Connect to cloud technology
           p
@@ -20,72 +20,40 @@ block sections
           p
             | Like any other cloud editor, you will always get the up-to-date editor with cloud component support.
         .col-sm-4
-          span.circle.circle-lg.circle-orange
+          span.circle.circle-lg.circle-blue
             i.fa.fa-lock
           h4 All the data are still in your hand
           p
             | Our cloud do not collect your data, it's highest secured by never hand over your data to anybody.
       .call-to-action-buttons
-        a.btn.btn-success(href="#cloudhmi-in-five-steps") Learn more
+        a.btn.btn-success(href="#products") Learn more
         //-a.btn.btn-link(href="signup.html") Sign up for a free trial
-  section#cloudhmi-in-five-steps
+  section.light#products
     .container
-      h1 Cloud HMI in five steps
-      .row
-        .col-md-8.col-md-push-2
-          .circle-left
-            span.circle.circle-blue.circle-white-icon
-              i.fa.fa-laptop
-            h3 1. Deploy Cloud2HMI
-            :markdown
-          .circle-left
-            span.circle.circle-green.circle-white-icon
-              i.fa.fa-plug
-            h3 2. Connect to your plant devices
-          .circle-left
-            span.circle.circle-orange.circle-white-icon
-              i.fa.fa-pencil
-            h3 3. Edit HMI in your browser
-          .circle-left
-            span.circle.circle-blue.circle-white-icon
-              i.fa.fa-mobile
-            h3 4. One-click publish
-          .circle-left
-            span.circle.circle-green.circle-white-icon
-              i.fa.fa-truck
-            h3 5. Explore it in different devices
-      .call-to-action-buttons
-        //-a.btn.btn-success(href="signup.html") Sign up for a free trial
-        a.btn.btn-success(href="hmifeature.html") View features
-  section.light
-    .container
-      h1 Mobile-friendly design
-      .row
-        .col-lg-6.col-lg-push-5.col-md-6.col-md-push-6
-          img(src="img/devices.png", alt="Laptop, tablet, and phone")
-        .col-lg-4.col-lg-pull-5.col-md-5.col-md-pull-6
-          h3 Access HMI anywhere
+      h1 What can we brought to you?
+      .row.text-center
+        .col-sm-4
+          span.cloud.cloud-hmi
           :markdown
-            After publish, you can view the HMI anywhere with a modern browser, 
-            even in the TV with a modern browser.
-
-            This important ability can let you never stick to a factory because 
-            you like the size of its HMI view, now you can use any device with modern
-            browser, like the iPad, Android Pad, Android TV ...
-      .call-to-action-buttons
-        //-a.btn.btn-primary(href="signup.html") Sign up for a free trial
-        a.btn.btn-primary(href="hmifeature.html") View features
-  //- section.slim
-  //-   .container
-  //-     .row
-  //-       .col-sm-10.col-sm-push-1
-  //-         blockquote.testimonial
-  //-           img(src="img/mike-cmscritic.jpg", alt="Mike Johnston of CMS Critic")
-  //-           q The devs have done an amazing job with this one
-  //-           cite
-  //-             a(href="http://www.cmscritic.com/surreal-cms-launches-v5-with-huge-improvements/", target="_blank")
-  //-               | Mike Johnston, CMS Critic
-  section.light
+            Lots of cloud features, like component store and up-to-date components, edit anywhere.
+            All you need is a modern browser.
+          .call-to-action-buttons
+            a.btn.btn-success(href="hmifeature.html") Learn more
+        .col-sm-4
+          span.cloud.cloud-plc
+          :markdown
+            Program your configuration in browser with modern debug utility. 
+            Very easy to use cloud snippets to accelerate your development.
+          .call-to-action-buttons
+            a.btn.btn-success.disabled(href="plcfeature.html") Learn more
+        .col-sm-4
+          span.cloud.cloud-dcs
+          :markdown
+            All your plants will be available in browser, with your modern mobile or tablet.
+            Very easy to know the status and make your decision wise and quick.
+          .call-to-action-buttons
+            a.btn.btn-success.disabled(href="dcsfeature.html") Learn more
+  section.dark
     .container
       h1 Why you need our cloud to plant?
       .row
@@ -128,3 +96,31 @@ block sections
       .call-to-action-buttons
         //-a.btn.btn-primary(href="signup.html") Sign up for a free trial
         a.btn.btn-primary(href="hmifeature.html") View features
+  section.light
+    .container
+      h1 Mobile-friendly design
+      .row
+        .col-lg-6.col-lg-push-5.col-md-6.col-md-push-6
+          img(src="img/devices.png", alt="Laptop, tablet, and phone")
+        .col-lg-4.col-lg-pull-5.col-md-5.col-md-pull-6
+          h3 Access HMI anywhere
+          :markdown
+            After publish, you can view the HMI anywhere with a modern browser, 
+            even in the TV with a modern browser.
+
+            This important ability can let you never stick to a factory because 
+            you like the size of its HMI view, now you can use any device with modern
+            browser, like the iPad, Android Pad, Android TV ...
+      .call-to-action-buttons
+        //-a.btn.btn-primary(href="signup.html") Sign up for a free trial
+        a.btn.btn-primary(href="hmifeature.html") View features
+  //- section.slim
+  //-   .container
+  //-     .row
+  //-       .col-sm-10.col-sm-push-1
+  //-         blockquote.testimonial
+  //-           img(src="img/mike-cmscritic.jpg", alt="Mike Johnston of CMS Critic")
+  //-           q The devs have done an amazing job with this one
+  //-           cite
+  //-             a(href="http://www.cmscritic.com/surreal-cms-launches-v5-with-huge-improvements/", target="_blank")
+  //-               | Mike Johnston, CMS Critic

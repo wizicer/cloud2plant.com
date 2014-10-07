@@ -116,7 +116,7 @@ module.exports = (grunt) ->
           livereload: true
 
       jade:
-        files: "src/jade/*.jade"
+        files: "src/jade/**/*.jade"
         tasks: ["jade:dev"]
         options:
           livereload: true
