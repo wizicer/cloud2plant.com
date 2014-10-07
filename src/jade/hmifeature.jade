@@ -2,8 +2,8 @@ extends layout\layout.jade
 block sections
   section.intro
     .container
-      h1.has-subtitle Powerful features
-      p.subtitle Easy to setup, hard to put down
+      h1.has-subtitle Cloud HMI
+      p.subtitle Powerful features with intuitive UI
   section#cloudhmi-in-five-steps
     .container
       h1 Cloud HMI in five steps
@@ -30,40 +30,56 @@ block sections
             span.circle.circle-green.circle-white-icon
               i.fa.fa-truck
             h3 5. Explore it in different devices
-      .call-to-action-buttons
-        //-a.btn.btn-success(href="signup.html") Sign up for a free trial
-        a.btn.btn-success(href="hmifeature.html") View features
-  section#for-designers.light
+  section.light
     .container
-      h1 Made for designers
-      // Everything in one place
       .row.feature-row
         .col-md-6.co.col-md-push-6
           .feature-image
-            img(src="img/features/sites.png", alt="")
+            img(src="img/hmi/dragtolayout.png")
         .col-md-6.col-md-pull-6
           .feature-desc
             .icon-left
               i.fa.fa-check.icon-success
-              h2 Multiple websites
-              p
-                | Manage multiple sites and clients from one account
-                | without installing any software. Surreal does its
-                | magic with just an FTP, SFTP, or Amazon S3 connection.
-              p
-                | Integrate with new and existing websites. Since all
-                | files stay on
-                em your server
-                | , you&#8217;re never
-                | locked into our service.
-              p
-                a.btn.btn-sm.btn-primary(href="signup.html") Start free trial
+              :markdown
+                ## Drag to layout
+                WYSIWYG(What you see is what you get) editor to assistant you to layout HMI
+                following your mind.
+
+                easy to edit properties of each component.
+      .row.feature-row
+        .col-md-6.co.col-md-push-6
+          .feature-image
+            img(src="img/hmi/selecttag.png")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              :markdown
+                ## Easy to select tag
+                To make the gauge reflect the physical world, what you should do is just select tag
+                from a tag server, and it will be wired. Then you can monitor the value change
+                from your mobile or other modern terminal.
+      .row.feature-row
+        .col-md-6.co.col-md-push-6
+          .feature-image
+            img(src="img/hmi/mobiledevice.png")
+        .col-md-6.col-md-pull-6
+          .feature-desc
+            .icon-left
+              i.fa.fa-check.icon-success
+              :markdown
+                ## Mobile friendly UI
+                Edit from the comfort of your desktop or make changes on the go with your tablet or phone.
+                Works great with most devices with modern browser.
+
+                You don’t have to download an app. Just open it up in your browser and start editing.
+
   section
     .container
       .row
         .col-sm-6.col-sm-push-3
         :markdown
           ## Feature of Cloud HMI is currently under construct
-          Currently we are in internal accellerating status, so we only invite 
+          Currently we are in internal accelerating status, so we only invite 
           friends to our alpha try-run, if you still have interesting, 
           you can drop us a [email](mailto:invite@plant2cloud.com?subject=interesting%20in%20cloud2plant)
