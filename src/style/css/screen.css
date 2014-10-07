@@ -1035,8 +1035,8 @@ form.form-busy .form-loader {
         color: #d39e4c;
     }
 
-    .feature-row .feature-image img {
-        display: none;
-    }
+    /* .feature-row .feature-image img { */
+    /*     display: none; */
+    /* } */
 }
 

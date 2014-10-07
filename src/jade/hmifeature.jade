@@ -14,29 +14,43 @@ block sections
               i.fa.fa-laptop
             h3 1. Deploy Cloud2HMI
             :markdown
+              You have two ways to get Cloud2HMI deployed, first one is deploy our software to 
+              your Windows Station, second is get a `C2P box` with all functionalities inside.
           .circle-left
             span.circle.circle-green.circle-white-icon
               i.fa.fa-plug
             h3 2. Connect to your plant devices
+            :markdown
+              Connect all your devices to the station or `C2P box` via ethernet, we are supporting
+              modbus protocol now, some other industrial communication protocols are coming later.
           .circle-left
             span.circle.circle-orange.circle-white-icon
               i.fa.fa-pencil
             h3 3. Edit HMI in your browser
+            :markdown
+              Open your browser, and type the host name of station or `C2P box`, you will be required
+              to log into the system to take actions. You can do almost everything inside browser, 
+              and will take effect immediately you saved project.
           .circle-left
             span.circle.circle-blue.circle-white-icon
               i.fa.fa-mobile
             h3 4. One-click publish
+            :markdown
+              With complete authorization support, you can deploy your changes with just one click,
+              and all the clients(maybe he is your boss) will see the latest page you just saved without
+              updating anything in the client-side.
           .circle-left
             span.circle.circle-green.circle-white-icon
               i.fa.fa-truck
             h3 5. Explore it in different devices
+            :markdown
+              Of cause, all the devices with modern browser will be supported, so you can view the dashboard
+              even in the big television or small mobile phone. With reponsive design, it will look good for
+              both small and big screen.
   section.light
     .container
       .row.feature-row
-        .col-md-6.co.col-md-push-6
-          .feature-image
-            img(src="img/hmi/dragtolayout.png")
-        .col-md-6.col-md-pull-6
+        .col-md-6
           .feature-desc
             .icon-left
               i.fa.fa-check.icon-success
@@ -45,12 +59,12 @@ block sections
                 WYSIWYG(What you see is what you get) editor to assistant you to layout HMI
                 following your mind.
 
-                easy to edit properties of each component.
-      .row.feature-row
-        .col-md-6.co.col-md-push-6
+                Easy to edit properties of each component.
+        .col-md-6.co
           .feature-image
-            img(src="img/hmi/selecttag.png")
-        .col-md-6.col-md-pull-6
+            img(src="img/hmi/dragtolayout.png")
+      .row.feature-row
+        .col-md-6
           .feature-desc
             .icon-left
               i.fa.fa-check.icon-success
@@ -59,11 +73,11 @@ block sections
                 To make the gauge reflect the physical world, what you should do is just select tag
                 from a tag server, and it will be wired. Then you can monitor the value change
                 from your mobile or other modern terminal.
-      .row.feature-row
-        .col-md-6.co.col-md-push-6
+        .col-md-6.co
           .feature-image
-            img(src="img/hmi/mobiledevice.png")
-        .col-md-6.col-md-pull-6
+            img(src="img/hmi/selecttag.png")
+      .row.feature-row
+        .col-md-6
           .feature-desc
             .icon-left
               i.fa.fa-check.icon-success
@@ -73,13 +87,16 @@ block sections
                 Works great with most devices with modern browser.
 
                 You don’t have to download an app. Just open it up in your browser and start editing.
+        .col-md-6.co
+          .feature-image
+            img(src="img/hmi/mobiledevice.png")
 
   section
     .container
       .row
         .col-sm-6.col-sm-push-3
-        :markdown
-          ## Feature of Cloud HMI is currently under construct
-          Currently we are in internal accelerating status, so we only invite 
-          friends to our alpha try-run, if you still have interesting, 
-          you can drop us a [email](mailto:invite@plant2cloud.com?subject=interesting%20in%20cloud2plant)
+          :markdown
+            ## Feature of Cloud HMI is currently under construct
+            Currently we are in internal accelerating status, so we only invite 
+            friends to our alpha try-run, if you still have interesting, 
+            you can drop us a [email](mailto:invite@plant2cloud.com?subject=interesting%20in%20cloud2plant)
