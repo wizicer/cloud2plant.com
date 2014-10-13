@@ -2,8 +2,8 @@ extends layout\layout.jade
 block sections
   section.dark
     .container
-      h1.has-subtitle
-        | Bring cloud to your plant
+      - var _ = function (s) { if (s in data) return data[s]; else return s;};
+      h1.has-subtitle=_("Bring cloud to your plant")
       p.subtitle
         | without putting your data into risk
       .row.text-center

@@ -1,5 +1,17 @@
 module.exports = (grunt) ->
   
+  jadefiles = [
+    {
+      expand: true
+      cwd: 'src/jade'
+      src: ['*.jade']
+      ext: '.html'
+      dest: 'public'
+    }
+  ]
+
+  cndata = require('./src/locales/cn.json')
+
   # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
@@ -31,38 +43,26 @@ module.exports = (grunt) ->
           "css/style.css": "less/style.less"
 
     jade:
+      options:
+        # data: (dest, src) ->
+        #   return {
+        #     t: (s) -> cndata(s)
+        #     a: 'test'
+        #   }
+        data: (dest, src) -> 
+          t = require('./src/locales/cn.json')
+          return {
+            data: t
+          }
+
+
       dev:
         options:
-          data:
-            debug: true
-
           pretty: true
 
-        files: [
-          {
-            expand: true
-            cwd: 'src/jade'
-            src: ['*.jade']
-            ext: '.html'
-            dest: 'public'
-          }
-        ]
-
+        files: jadefiles
       prod:
-        options:
-          data:
-            debug: false
-
-        files: [
-          {
-            expand: true
-            cwd: 'src/jade'
-            src: ['*.jade']
-            ext: '.html'
-            dest: 'public'
-          }
-        ]
-
+        files: jadefiles
     copy:
       main:
         files: [
