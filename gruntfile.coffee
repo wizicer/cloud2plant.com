@@ -50,9 +50,8 @@ module.exports = (grunt) ->
         #     a: 'test'
         #   }
         data: (dest, src) -> 
-          t = require('./src/locales/cn.json')
           return {
-            data: t
+            _ : (s) -> if (cndata.hasOwnProperty(s)) then cndata[s] else s
           }
 
 
