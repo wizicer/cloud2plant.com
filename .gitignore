@@ -2,3 +2,5 @@
 \[Originals\]
 /public
 /.grunt
+/src/locales/*.mo
+/src/locales/src

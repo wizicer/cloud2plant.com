@@ -1,16 +1,5 @@
 module.exports = (grunt) ->
   
-  jadefiles = [
-    {
-      expand: true
-      cwd: 'src/jade'
-      src: ['*.jade']
-      ext: '.html'
-      dest: 'public'
-    }
-  ]
-
-  cndata = require('./src/locales/cn.json')
 
   # Project configuration.
   grunt.initConfig
@@ -43,15 +32,21 @@ module.exports = (grunt) ->
           "css/style.css": "less/style.less"
 
     jade:
+      jadefiles: [
+        {
+          expand: true
+          cwd: 'src/jade'
+          src: ['*.jade']
+          ext: '.html'
+          dest: 'public'
+        }
+      ]
+
+      cndata: require('./src/locales/cn.json')
       options:
-        # data: (dest, src) ->
-        #   return {
-        #     t: (s) -> cndata(s)
-        #     a: 'test'
-        #   }
         data: (dest, src) -> 
           return {
-            _ : (s) -> if (cndata.hasOwnProperty(s)) then cndata[s] else s
+            _ : (s) -> if (this.cndata.hasOwnProperty(s)) then this.cndata[s] else s
           }
 
 
@@ -59,9 +54,9 @@ module.exports = (grunt) ->
         options:
           pretty: true
 
-        files: jadefiles
+        files: this.jadefiles
       prod:
-        files: jadefiles
+        files: this.jadefiles
     copy:
       main:
         files: [
@@ -91,6 +86,23 @@ module.exports = (grunt) ->
       options:
         base: 'public'
       src: '**/*'
+
+    abideExtract:
+      js:
+        src: "src/jade/**/*.jade"
+        dest: "src/locales/messages.pot"
+        options:
+          cmd: "jsxgettext"
+          language: "jade"
+          keyword: "_"
+
+    abideCompile:
+      json:
+        dest: "src/locales/"
+        options:
+          localeDir: "src/locales/"
+          type: "json"
+          createJSFiles: false # defaults to true
 
     express:
       all:
@@ -148,6 +160,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-express"
+  grunt.loadNpmTasks "grunt-i18n-abide"
   grunt.loadNpmTasks "grunt-gh-pages"
   
   # Default task(s).

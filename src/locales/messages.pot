@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2014-10-13 13:29+0000\n"
+
+#: src/jade/index.jade:5
+msgid "Bring cloud to your plant"
+msgstr ""
+
+#: src/jade/index.jade:6
+msgid "without putting your data into risk"
+msgstr ""
