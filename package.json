@@ -13,5 +13,8 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-gh-pages": "~0.9.1",
     "grunt-i18n-abide": "0.0.12"
+  },
+  "scripts": {
+    "prepublish": "npm -g install jsxgettext"
   }
 }

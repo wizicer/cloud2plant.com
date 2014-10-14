@@ -147,7 +147,7 @@ module.exports = (grunt) ->
 
       jade:
         files: "src/jade/**/*.jade"
-        tasks: ["jade:dev"]
+        tasks: ["jade:dev", "abideExtract"]
         options:
           livereload: true
 
@@ -159,7 +159,7 @@ module.exports = (grunt) ->
 
       po:
         files: "src/locales/**/*.po"
-        tasks: ["abideExtract", "jade:dev"]
+        tasks: ["abideCompile", "jade:dev"]
         options:
           livereload: true
 
@@ -177,13 +177,14 @@ module.exports = (grunt) ->
   
   # Default task(s).
   grunt.registerTask "default", [
+    "abideCompile"
     "jade:dev"
     "uglify"
     "copy"
     "express"
     "watch"
   ]
-  grunt.registerTask "pot", [ "abideCompile" ]
+  grunt.registerTask "pot", [ "abideExtract" ]
   grunt.registerTask "publish", [
     "clean"
     "jade:prod"
