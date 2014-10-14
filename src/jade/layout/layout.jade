@@ -1,6 +1,5 @@
 mixin links
-  a(href="hmifeature.html") Cloud HMI
-  //- a(href="pricing.html") Pricing
+  a(href=langlink("hmifeature")) Cloud HMI
   
 doctype html
 html
@@ -22,29 +21,28 @@ html
   body
     header
       nav.container
-        a.c2p-logo.c2p-logo-dark(href="index.html") Cloud 2 Plant
+        a.c2p-logo.c2p-logo-dark(href=langlink("index")) Cloud 2 Plant
         a.mobile-menu-toggle(href="#")
           i.fa.fa-bars
         span.menu-items
           +links
           //- a(href="http://icerdesign.com") Blog
-          a(href="contact.html") Contact
+          a(href=langlink("contact")) Contact
           span.extras
-            //- a(href="http://edit-content.com/") Login
-            //- a.signup(href="signup.html") Sign up
+            a(href="index-en.html") English
+            a(href="index-zh.html") 简体中文
     block sections
     footer
       .container
         nav
-          a.c2p-logo.c2p-logo-light(href="index.html") Cloud 2 Plant
+          a.c2p-logo.c2p-logo-light(href=langlink("index")) Cloud 2 Plant
           +links
           a(href="http://icerdesign.com", target="_blank") Blog
-          //- a(href="terms.html") Terms
-          a(href="contact.html") Contact
+          a(href=langlink("contact")) Contact
           div(style="display:none;")
             script(language="javascript", type="text/javascript", src="http://js.users.51.la/17278963.js")
         p.copyright
           | &#169;2014 Cloud 2 Plant &#8226;
           | Created by 
-          a(href="http://icerdesign.com") Icer
+          a(href="http://icerdesign.com", target="_blank") Icer
 

@@ -33,16 +33,16 @@ module.exports = (grunt) ->
           "css/style.css": "less/style.less"
 
     jade:
-      options:
-        data: (dest, src) -> 
-          cndata = require('./src/locales/src/cn.json')
-          return {
-            _: (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
-            _md: (s) -> markdown.toHTML(if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s)
-          }
-
-      dev:
+      en:
         options:
+          data: (dest, src) -> 
+            cndata = require('./src/locales/src/en.json')
+            return {
+              lang: 'en'
+              langlink: (s) -> s + '-en.html'
+              _: (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
+              _md: (s) -> markdown.toHTML(if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s)
+            }
           pretty: true
 
         files: [
@@ -50,22 +50,37 @@ module.exports = (grunt) ->
             expand: true
             cwd: 'src/jade'
             src: ['*.jade']
-            ext: '.html'
+            ext: '-en.html'
             dest: 'public'
           }
         ]
-      prod:
+      zh:
+        options:
+          data: (dest, src) -> 
+            cndata = require('./src/locales/src/zh.json')
+            return {
+              lang: 'zh'
+              langlink: (s) -> s + '-zh.html'
+              _: (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
+              _md: (s) -> markdown.toHTML(if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s)
+            }
+          pretty: true
+
         files: [
           {
             expand: true
             cwd: 'src/jade'
             src: ['*.jade']
-            ext: '.html'
+            ext: '-zh.html'
             dest: 'public'
           }
         ]
+
     copy:
-      main:
+      index:
+        dest: 'public/index.html'
+        src: 'public/index-en.html'
+      assets:
         files: [
           {
             expand: true
@@ -148,7 +163,7 @@ module.exports = (grunt) ->
 
       jade:
         files: "src/jade/**/*.jade"
-        tasks: ["jade:dev"]
+        tasks: ["jade", "copy:index"]
         options:
           livereload: true
 
@@ -158,11 +173,11 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
-      po:
-        files: "src/locales/**/*.po"
-        tasks: ["abideCompile", "jade:dev"]
-        options:
-          livereload: true
+      # po:
+      #   files: "src/locales/**/*.po"
+      #   tasks: ["abideCompile", "jade"]
+      #   options:
+      #     livereload: true
 
   
   # Load the plugin that provides the "uglify" task.
@@ -179,7 +194,7 @@ module.exports = (grunt) ->
   # Default task(s).
   grunt.registerTask "default", [
     "abideCompile"
-    "jade:dev"
+    "jade"
     "uglify"
     "copy"
     "express"
