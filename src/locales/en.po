@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: c2p\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 06:43+0000\n"
-"PO-Revision-Date: 2014-10-14 14:45+0800\n"
+"POT-Creation-Date: 2014-10-14 10:47+0000\n"
+"PO-Revision-Date: 2014-10-14 21:23+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -13,44 +13,224 @@ msgstr ""
 "X-Generator: Poedit 1.6.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: src/jade/contact.jade:7
+msgid "contact us content"
+msgstr ""
+"## Contact us\n"
+"Currently we are in internal accelerating status, so we only invite friends "
+"to our alpha try-run, if you still have interesting, you can drop us a "
+"[email](mailto:invite@cloud2plant.com?subject=interesting%20in%20cloud2plant)"
+
+#: src/jade/hmifeature.jade:5
+msgid "Cloud HMI"
+msgstr "Cloud HMI"
+
+#: src/jade/hmifeature.jade:6
+msgid "Powerful features with intuitive UI"
+msgstr "Powerful features with intuitive UI"
+
+#: src/jade/hmifeature.jade:9
+msgid "Cloud HMI in five steps"
+msgstr "Cloud HMI in five steps"
+
+#: src/jade/hmifeature.jade:15
+msgid "hmi-feature steps deploy cloud2hmi"
+msgstr ""
+"### 1. Deploy Cloud2HMI\n"
+"You have two ways to get Cloud2HMI deployed, first one is deploy our "
+"software to your Windows Station, second is get a `C2P box` with all "
+"functionalities inside."
+
+#: src/jade/hmifeature.jade:19
+msgid "hmi-feature steps connect devices"
+msgstr ""
+"### 2. Connect to your plant devices\n"
+"Connect all your devices to the station or `C2P box` via ethernet, we are "
+"supporting modbus protocol now, some other industrial communication "
+"protocols are coming later."
+
+#: src/jade/hmifeature.jade:23
+msgid "hmi-feature steps edit hmi"
+msgstr ""
+"### 3. Edit HMI in your browser\n"
+"Open your browser, and type the host name of station or `C2P box`, you will "
+"be required to log into the system to take actions. You can do almost "
+"everything inside browser, and will take effect immediately you saved "
+"project."
+
+#: src/jade/hmifeature.jade:27
+msgid "hmi-feature steps publish"
+msgstr ""
+"### 4. One-click publish\n"
+"With complete authorization support, you can deploy your changes with just "
+"one click, and all the clients(maybe he is your boss) will see the latest "
+"page you just saved without updating anything in the client-side."
+
+#: src/jade/hmifeature.jade:31
+msgid "hmi-feature steps explorer"
+msgstr ""
+"### 5. Explore it in different devices\n"
+"Of cause, all the devices with modern browser will be supported, so you can "
+"view the dashboard even in the big television or small mobile phone. With "
+"responsive design, it will look good for both small and big screen."
+
+#: src/jade/hmifeature.jade:39
+msgid "hmi-feature drag to layout"
+msgstr ""
+"## Drag to layout\n"
+"WYSIWYG(What you see is what you get) editor to assistant you to layout HMI "
+"following your mind.\n"
+"\n"
+"Easy to edit properties of each component."
+
+#: src/jade/hmifeature.jade:48
+msgid "hmi-feature select tag"
+msgstr ""
+"## Easy to select tag\n"
+"To make the gauge reflect the physical world, what you should do is just "
+"select tag from a tag server, and it will be wired. Then you can monitor the "
+"value change from your mobile or other modern terminal."
+
+#: src/jade/hmifeature.jade:57
+msgid "hmi-feature mobile friendly ui"
+msgstr ""
+"## Mobile friendly UI\n"
+"Edit from the comfort of your desktop or make changes on the go with your "
+"tablet or phone. Works great with most devices with modern browser.\n"
+"\n"
+"You don’t have to download an app. Just open it up in your browser and start "
+"editing."
+
+#: src/jade/hmifeature.jade:66
+msgid "under construct"
+msgstr ""
+"## Feature of Cloud HMI is currently under construct\n"
+"Currently we are in internal accelerating status, so we only invite friends "
+"to our alpha try-run, if you still have interesting, you can drop us a "
+"[email](mailto:invite@cloud2plant.com?subject=interesting%20in%20cloud2plant)"
+
 #: src/jade/index.jade:5
 msgid "Bring cloud to your plant"
-msgstr "en-Bring cloud to your plant"
+msgstr "Bring cloud to your plant"
 
 #: src/jade/index.jade:6
 msgid "without putting your data into risk"
-msgstr "en-0subtitle"
+msgstr "without putting your data into risk"
 
 #: src/jade/index.jade:11
-msgid "Connect to cloud technology"
+msgid "cloud technology"
 msgstr ""
-
-#: src/jade/index.jade:12
-msgid ""
+"#### Connect to cloud technology\n"
 "Modern cloud technology will be brought to your plant, access your data "
 "anywhere with any modern device."
-msgstr ""
 
-#: src/jade/index.jade:16
-msgid "Intuitive editor with cloud support"
+#: src/jade/index.jade:15
+msgid "pay you used"
 msgstr ""
-
-#: src/jade/index.jade:17
-msgid ""
+"#### Intuitive editor with cloud support\n"
 "Like any other cloud editor, you will always get the up-to-date editor with "
 "cloud component support."
-msgstr ""
 
-#: src/jade/index.jade:21
-msgid "All the data are still in your hand"
+#: src/jade/index.jade:19
+msgid "super secured"
 msgstr ""
-
-#: src/jade/index.jade:22
-msgid ""
+"#### All the data are still in your hand\n"
 "Our cloud do not collect your data, it's highest secured by never hand over "
 "your data to anybody."
-msgstr ""
 
-#: src/jade/index.jade:24
+#: src/jade/index.jade:21 src/jade/index.jade:31
 msgid "Learn more"
-msgstr "en-leran"
+msgstr "Learn more"
+
+#: src/jade/index.jade:25
+msgid "What can we brought to you?"
+msgstr "What can we brought to you?"
+
+#: src/jade/index.jade:29
+msgid "cloud hmi description"
+msgstr ""
+"Lots of cloud features, like component store and up-to-date components, edit "
+"anywhere. All you need is a modern browser."
+
+#: src/jade/index.jade:34
+msgid "cloud plc description"
+msgstr ""
+"Program your configuration in browser with modern debug utility. Very easy "
+"to use cloud snippets to accelerate your development."
+
+#: src/jade/index.jade:36
+msgid "Still in Development"
+msgstr "Still in Development"
+
+#: src/jade/index.jade:39
+msgid "cloud dcs description"
+msgstr ""
+"All your plants will be available in browser, with your modern mobile or "
+"tablet. Very easy to know the status and make your decision wise and quick."
+
+#: src/jade/index.jade:41
+msgid "Still in Plan"
+msgstr "Still in Plan"
+
+#: src/jade/index.jade:44
+msgid "Why you need our cloud to plant?"
+msgstr "Why you need our cloud to plant?"
+
+#: src/jade/index.jade:49
+msgid "why cloud no risk"
+msgstr ""
+"### No risk to your data\n"
+"We never upload any potion of your data into the cloud without your "
+"authorization. Your data will always stay in your site. "
+
+#: src/jade/index.jade:52
+msgid "why cloud saves you time"
+msgstr ""
+"### Saves you time\n"
+"Embedded the featured component into your project by one click. And the "
+"components is increasing continuously"
+
+#: src/jade/index.jade:55
+msgid "why cloud super affordable"
+msgstr ""
+"### Super affordable\n"
+"We are using _pay as you grown_ model, so it's easy to get started."
+
+#: src/jade/index.jade:59
+msgid "why cloud tons of features"
+msgstr ""
+"### Tons of features\n"
+"We provide a lot of features that make your life easier and enjoyable, and "
+"it's increasing even after you have deployed the server side in your plant."
+
+#: src/jade/index.jade:62
+msgid "why cloud nothing to update"
+msgstr ""
+"### Nothing to update\n"
+"You can never worry about the software being out of date, we are releasing "
+"bug fixes, new features and updates on a regular basis. "
+
+#: src/jade/index.jade:65
+msgid "why cloud legendary support"
+msgstr ""
+"### Legendary support\n"
+"We are stand-by for 7 X 24 hours, even in the weekends and holidays."
+
+#: src/jade/index.jade:68 src/jade/index.jade:79
+msgid "View features"
+msgstr "View features"
+
+#: src/jade/index.jade:71
+msgid "mobile-friendly design title"
+msgstr "Mobile-friendly design"
+
+#: src/jade/index.jade:76
+msgid "mobile-friendly design description"
+msgstr ""
+"### Access HMI anywhere\n"
+"After publish, you can view the HMI anywhere with a modern browser, even in "
+"the TV with a modern browser.\n"
+"\n"
+"This important ability can let you never stick to a factory because you like "
+"the size of its HMI view, now you can use any device with modern browser, "
+"like the iPad, Android Pad, Android TV ..."

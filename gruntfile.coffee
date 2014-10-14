@@ -173,11 +173,11 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
-      # po:
-      #   files: "src/locales/**/*.po"
-      #   tasks: ["abideCompile", "jade"]
-      #   options:
-      #     livereload: true
+      po:
+        files: ["src/locales/zh.po", "src/locales/en.po"]
+        tasks: ["abideCompile", "jade"]
+        options:
+          livereload: true
 
   
   # Load the plugin that provides the "uglify" task.
