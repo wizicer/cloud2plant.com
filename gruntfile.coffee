@@ -37,8 +37,8 @@ module.exports = (grunt) ->
         data: (dest, src) -> 
           cndata = require('./src/locales/src/cn.json')
           return {
-            md: (s) -> markdown.toHTML(s)
-            _ : (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
+            _: (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
+            _md: (s) -> markdown.toHTML(if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s)
           }
 
       dev:
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
         options:
           cmd: "jsxgettext"
           language: "jade"
-          keyword: "_"
+          keyword: ["_", "_md"]
 
     abideCompile:
       json:
@@ -148,7 +148,7 @@ module.exports = (grunt) ->
 
       jade:
         files: "src/jade/**/*.jade"
-        tasks: ["jade:dev", "abideExtract"]
+        tasks: ["jade:dev"]
         options:
           livereload: true
 

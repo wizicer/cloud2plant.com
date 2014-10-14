@@ -2,16 +2,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: c2p\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 06:43+0000\n"
-"PO-Revision-Date: 2014-10-14 14:50+0800\n"
+"POT-Creation-Date: 2014-10-14 09:53+0000\n"
+"PO-Revision-Date: 2014-10-14 17:58+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: zh_Hans_CN\n"
+
+#: src/jade/hmifeature.jade:5
+msgid "Cloud HMI"
+msgstr ""
+
+#: src/jade/hmifeature.jade:6
+msgid "Powerful features with intuitive UI"
+msgstr ""
+
+#: src/jade/hmifeature.jade:9
+msgid "Cloud HMI in five steps"
+msgstr ""
+
+#: src/jade/hmifeature.jade:15
+msgid "1. Deploy Cloud2HMI"
+msgstr ""
+
+#: src/jade/hmifeature.jade:16
+msgid ""
+"You have two ways to get Cloud2HMI deployed, first one is deploy our "
+"software to your Windows Station, second is get a `C2P box` with all "
+"functionalities inside."
+msgstr "中文来描述`C2P`箱子"
 
 #: src/jade/index.jade:5
 msgid "Bring cloud to your plant"
@@ -22,35 +45,124 @@ msgid "without putting your data into risk"
 msgstr "副标题"
 
 #: src/jade/index.jade:11
-msgid "Connect to cloud technology"
+msgid "cloud technology title"
 msgstr ""
 
 #: src/jade/index.jade:12
-msgid ""
-"Modern cloud technology will be brought to your plant, access your data "
-"anywhere with any modern device."
+msgid "cloud technology description"
 msgstr ""
 
 #: src/jade/index.jade:16
-msgid "Intuitive editor with cloud support"
+msgid "pay you used title"
 msgstr ""
 
 #: src/jade/index.jade:17
-msgid ""
-"Like any other cloud editor, you will always get the up-to-date editor with "
-"cloud component support."
+msgid "pay you used description"
 msgstr ""
 
 #: src/jade/index.jade:21
-msgid "All the data are still in your hand"
+msgid "super secured title"
 msgstr ""
 
 #: src/jade/index.jade:22
-msgid ""
-"Our cloud do not collect your data, it's highest secured by never hand over "
-"your data to anybody."
+msgid "super secured description"
 msgstr ""
 
-#: src/jade/index.jade:24
+#: src/jade/index.jade:24 src/jade/index.jade:34
 msgid "Learn more"
 msgstr "了解更多"
+
+#: src/jade/index.jade:28
+msgid "What can we brought to you?"
+msgstr ""
+
+#: src/jade/index.jade:32
+msgid "cloud hmi description"
+msgstr ""
+
+#: src/jade/index.jade:37
+msgid "cloud plc description"
+msgstr ""
+
+#: src/jade/index.jade:39
+msgid "Still in Development"
+msgstr ""
+
+#: src/jade/index.jade:42
+msgid "cloud dcs description"
+msgstr ""
+
+#: src/jade/index.jade:44
+msgid "Still in Plan"
+msgstr ""
+
+#: src/jade/index.jade:47
+msgid "Why you need our cloud to plant?"
+msgstr ""
+
+#: src/jade/index.jade:52
+msgid "no risk title"
+msgstr ""
+
+#: src/jade/index.jade:53
+msgid "no risk description"
+msgstr ""
+
+#: src/jade/index.jade:56
+msgid "saves you time title"
+msgstr ""
+
+#: src/jade/index.jade:57
+msgid "saves you time description"
+msgstr ""
+
+#: src/jade/index.jade:60
+msgid "super affordable title"
+msgstr ""
+
+#: src/jade/index.jade:61
+msgid "super affordable description"
+msgstr ""
+
+#: src/jade/index.jade:65
+msgid "tons of features title"
+msgstr ""
+
+#: src/jade/index.jade:66
+msgid "tons of features description"
+msgstr ""
+
+#: src/jade/index.jade:69
+msgid "nothing to update title"
+msgstr ""
+
+#: src/jade/index.jade:70
+msgid "nothing to update description"
+msgstr ""
+
+#: src/jade/index.jade:73
+msgid "legendary support title"
+msgstr ""
+
+#: src/jade/index.jade:74
+msgid "legendary support description"
+msgstr ""
+
+#: src/jade/index.jade:77 src/jade/index.jade:89
+msgid "View features"
+msgstr ""
+
+#: src/jade/index.jade:80
+msgid "Mobile-friendly design"
+msgstr ""
+
+#: src/jade/index.jade:85
+msgid "hmi title"
+msgstr ""
+
+#: src/jade/index.jade:86
+msgid "hmi description"
+msgstr ""
+
+#~ msgid "Connect to cloud technology"
+#~ msgstr "连接到云"

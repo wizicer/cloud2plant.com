@@ -8,18 +8,15 @@ block sections
         .col-sm-4
           span.circle.circle-lg.circle-orange
             i.fa.fa-cloud
-          h4=_("cloud technology title")
-          p=_("cloud technology description")
+          !=_md("cloud technology")
         .col-sm-4
           span.circle.circle-lg.circle-green
             i.fa.fa-pencil-square-o
-          h4=_("pay you used title")
-          p=_("pay you used description")
+          !=_md("pay you used")
         .col-sm-4
           span.circle.circle-lg.circle-blue
             i.fa.fa-lock
-          h4=_("super secured title")
-          p=_("super secured description")
+          !=_md("super secured")
       .call-to-action-buttons
         a.btn.btn-success(href="#products")=_("Learn more")
         //-a.btn.btn-link(href="signup.html") Sign up for a free trial
@@ -29,17 +26,17 @@ block sections
       .row.text-center
         .col-sm-4
           span.cloud.cloud-hmi
-          p=_("cloud hmi description")
+          !=_md("cloud hmi description")
           .call-to-action-buttons
             a.btn.btn-success(href="hmifeature.html")=_("Learn more")
         .col-sm-4
           span.cloud.cloud-plc
-          p=_("cloud plc description")
+          !=_md("cloud plc description")
           .call-to-action-buttons
             a.btn.btn-success.disabled=_("Still in Development")
         .col-sm-4
           span.cloud.cloud-dcs
-          p=_("cloud dcs description")
+          !=_md("cloud dcs description")
           .call-to-action-buttons
             a.btn.btn-success.disabled=_("Still in Plan")
   section.dark
@@ -49,41 +46,34 @@ block sections
         .col-md-5.col-md-push-1.col-sm-6
           .icon-left
             i.fa.fa-lock.icon-success
-            h3=_("no risk title")
-            p=_("no risk description")
+            !=_md("why cloud no risk")
           .icon-left
             i.fa.fa-clock-o.icon-success
-            h3=_("saves you time title")
-            p=_("saves you time description")
+            !=_md("why cloud saves you time")
           .icon-left
             i.fa.fa-usd.icon-success
-            h3=_("super affordable title")
-            p=_("super affordable description")
+            !=_md("why cloud super affordable")
         .col-md-5.col-md-push-1.col-sm-6
           .icon-left
             i.fa.fa-magic.icon-success
-            h3=_("tons of features title")
-            p=_("tons of features description")
+            !=_md("why cloud tons of features")
           .icon-left
             i.fa.fa-cloud-upload.icon-success
-            h3=_("nothing to update title")
-            p=_("nothing to update description")
+            !=_md("why cloud nothing to update")
           .icon-left
             i.fa.fa-flip-horizontal.fa-comment-o.icon-success
-            h3=_("legendary support title")
-            p=_("legendary support description")
+            !=_md("why cloud legendary support")
       .call-to-action-buttons
         //-a.btn.btn-primary(href="signup.html") Sign up for a free trial
         a.btn.btn-primary(href="hmifeature.html")=_("View features")
   section.light
     .container
-      h1=_("Mobile-friendly design")
+      h1=_("mobile-friendly design title")
       .row
         .col-lg-6.col-lg-push-5.col-md-6.col-md-push-6
           img(src="img/devices.png", alt="Laptop, tablet, and phone")
         .col-lg-4.col-lg-pull-5.col-md-5.col-md-pull-6
-          h3=_("hmi title")
-          p=_("hmi description")
+          !=_md("mobile-friendly design description")
       .call-to-action-buttons
         //-a.btn.btn-primary(href="signup.html") Sign up for a free trial
         a.btn.btn-primary(href="hmifeature.html")=_("View features")
