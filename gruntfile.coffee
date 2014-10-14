@@ -32,21 +32,12 @@ module.exports = (grunt) ->
           "css/style.css": "less/style.less"
 
     jade:
-      jadefiles: [
-        {
-          expand: true
-          cwd: 'src/jade'
-          src: ['*.jade']
-          ext: '.html'
-          dest: 'public'
-        }
-      ]
 
-      cndata: require('./src/locales/cn.json')
       options:
         data: (dest, src) -> 
+          cndata = require('./src/locales/src/cn.json')
           return {
-            _ : (s) -> if (this.cndata.hasOwnProperty(s)) then this.cndata[s] else s
+            _ : (s) -> if (cndata.messages.hasOwnProperty(s)) then cndata.messages[s][1] else s
           }
 
 
@@ -54,9 +45,25 @@ module.exports = (grunt) ->
         options:
           pretty: true
 
-        files: this.jadefiles
+        files: [
+          {
+            expand: true
+            cwd: 'src/jade'
+            src: ['*.jade']
+            ext: '.html'
+            dest: 'public'
+          }
+        ]
       prod:
-        files: this.jadefiles
+        files: [
+          {
+            expand: true
+            cwd: 'src/jade'
+            src: ['*.jade']
+            ext: '.html'
+            dest: 'public'
+          }
+        ]
     copy:
       main:
         files: [
