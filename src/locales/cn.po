@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Language-Team: \n"
+"Project-Id-Version: c2p\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2014-10-13 21:38+0800\n"
+"POT-Creation-Date: 2014-10-14 06:43+0000\n"
+"PO-Revision-Date: 2014-10-14 14:50+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2014-10-13 13:29+0000\n"
-"Last-Translator: \n"
 "X-Generator: Poedit 1.6.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: zh_Hans_CN\n"
@@ -20,3 +20,37 @@ msgstr "测试一下标题"
 #: src/jade/index.jade:6
 msgid "without putting your data into risk"
 msgstr "副标题"
+
+#: src/jade/index.jade:11
+msgid "Connect to cloud technology"
+msgstr ""
+
+#: src/jade/index.jade:12
+msgid ""
+"Modern cloud technology will be brought to your plant, access your data "
+"anywhere with any modern device."
+msgstr ""
+
+#: src/jade/index.jade:16
+msgid "Intuitive editor with cloud support"
+msgstr ""
+
+#: src/jade/index.jade:17
+msgid ""
+"Like any other cloud editor, you will always get the up-to-date editor with "
+"cloud component support."
+msgstr ""
+
+#: src/jade/index.jade:21
+msgid "All the data are still in your hand"
+msgstr ""
+
+#: src/jade/index.jade:22
+msgid ""
+"Our cloud do not collect your data, it's highest secured by never hand over "
+"your data to anybody."
+msgstr ""
+
+#: src/jade/index.jade:24
+msgid "Learn more"
+msgstr "了解更多"

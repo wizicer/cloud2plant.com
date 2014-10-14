@@ -1,3 +1,5 @@
+markdown = require("markdown").markdown
+
 module.exports = (grunt) ->
 
   # Project configuration.
@@ -31,14 +33,13 @@ module.exports = (grunt) ->
           "css/style.css": "less/style.less"
 
     jade:
-
       options:
         data: (dest, src) -> 
           cndata = require('./src/locales/src/cn.json')
           return {
-            _ : (s) -> if (cndata.messages.hasOwnProperty(s)) then cndata.messages[s][1] else s
+            md: (s) -> markdown.toHTML(s)
+            _ : (s) -> if (cndata.messages.hasOwnProperty(s) && cndata.messages[s][1] != "") then cndata.messages[s][1] else s
           }
-
 
       dev:
         options:

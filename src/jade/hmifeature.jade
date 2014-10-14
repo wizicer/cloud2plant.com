@@ -2,20 +2,18 @@ extends layout\layout.jade
 block sections
   section.intro
     .container
-      h1.has-subtitle Cloud HMI
-      p.subtitle Powerful features with intuitive UI
+      h1.has-subtitle=_("Cloud HMI")
+      p.subtitle=_("Powerful features with intuitive UI")
   section#cloudhmi-in-five-steps
     .container
-      h1 Cloud HMI in five steps
+      h1=_("Cloud HMI in five steps")
       .row
         .col-md-8.col-md-push-2
           .circle-left
             span.circle.circle-blue.circle-white-icon
               i.fa.fa-laptop
-            h3 1. Deploy Cloud2HMI
-            :markdown
-              You have two ways to get Cloud2HMI deployed, first one is deploy our software to 
-              your Windows Station, second is get a `C2P box` with all functionalities inside.
+            h3=_("1. Deploy Cloud2HMI")
+            !=md(_("You have two ways to get Cloud2HMI deployed, first one is deploy our software to your Windows Station, second is get a `C2P box` with all functionalities inside."))
           .circle-left
             span.circle.circle-green.circle-white-icon
               i.fa.fa-plug
