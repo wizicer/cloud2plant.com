@@ -1,5 +1,4 @@
 module.exports = (grunt) ->
-  
 
   # Project configuration.
   grunt.initConfig
@@ -158,6 +157,12 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
+      po:
+        files: "src/locales/**/*.po"
+        tasks: ["abideExtract", "jade:dev"]
+        options:
+          livereload: true
+
   
   # Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks "grunt-contrib-uglify"
@@ -178,6 +183,7 @@ module.exports = (grunt) ->
     "express"
     "watch"
   ]
+  grunt.registerTask "pot", [ "abideCompile" ]
   grunt.registerTask "publish", [
     "clean"
     "jade:prod"
