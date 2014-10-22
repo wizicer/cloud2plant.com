@@ -203,8 +203,8 @@ module.exports = (grunt) ->
   grunt.registerTask "pot", [ "abideExtract" ]
   grunt.registerTask "publish", [
     "clean"
-    "jade:prod"
-    "uglify:prod"
+    "jade"
+    "uglify"
     "copy"
     "gh-pages"
   ]
